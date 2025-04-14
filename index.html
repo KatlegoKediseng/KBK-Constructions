@@ -7,12 +7,22 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="style.css"> </head>
+    <link rel="stylesheet" href="style.css">
+</head>
 <body>
     <header>
         <h1>Your Construction Company</h1>
         <p>Building надежность and инновации with expert hands.</p>
-        <a href="#services" class="cta-button">Explore Services</a>
+        <nav>
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="about.html">About Us</a></li>
+                <li><a href="services.html">Services</a></li>
+                <li><a href="projects.html">Projects</a></li>
+                <li><a href="contact.html">Contact Us</a></li>
+            </ul>
+        </nav>
+        <a href="services.html" class="cta-button">Explore Services</a>
     </header>
 
     <main id="services">
@@ -27,7 +37,7 @@
                 <h3>Commercial Construction</h3>
                 <p>Creating functional and impressive commercial spaces.</p>
             </div>
-             <div class="service-card">
+            <div class="service-card">
                 <h3>Renovation and Remodeling</h3>
                 <p>Transforming existing spaces with современными решениями.</p>
             </div>
@@ -38,15 +48,14 @@
         <p>&copy; 2025 Your Construction Company</p>
     </footer>
     <script>
-      document.addEventListener('DOMContentLoaded', () => {
-        const ctaButton = document.querySelector('.cta-button');
-        const servicesSection = document.getElementById('services');
+        document.addEventListener('DOMContentLoaded', () => {
+            const ctaButton = document.querySelector('.cta-button');
 
-        ctaButton.addEventListener('click', (event) => {
-          event.preventDefault();
-          servicesSection.scrollIntoView({ behavior: 'smooth' });
+            ctaButton.addEventListener('click', (event) => {
+                event.preventDefault();
+                window.location.href = "services.html";
+            });
         });
-      });
     </script>
 </body>
 </html>
