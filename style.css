@@ -1,0 +1,435 @@
+/* Global Styles */
+body {
+    font-family: 'Inter', sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #1a1a1a; /* Dark background for body */
+    color: #eeeeee; /* Very light gray, almost off-white, for text */
+    line-height: 1.7;
+}
+
+/* Header Styles */
+header {
+    background-color: #222222; /* Slightly lighter header background */
+    color: #ffc107; /* Gold */
+    padding: 2rem 0;
+    text-align: center;
+    border-bottom: 5px solid #d4ac0d; /* Darker gold accent */
+}
+
+header h1 {
+    font-size: 2.5rem;
+    font-weight: 600;
+    margin-bottom: 0.5rem;
+    letter-spacing: -0.02em;
+}
+
+header p {
+    font-size: 1.1rem;
+    font-weight: 400;
+    opacity: 0.9;
+    margin-bottom: 2rem;
+    max-width: 80%;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+nav ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    justify-content: center;
+    margin-bottom: 2rem;
+}
+
+nav ul li {
+    margin: 0 1.5rem;
+}
+
+nav a {
+    color: #ffc107;
+    text-decoration: none;
+    font-size: 1.1rem;
+    font-weight: 500;
+    transition: color 0.3s ease;
+}
+
+nav a:hover {
+    color: #fff59d; /* Lighter gold on hover */
+}
+
+.cta-button {
+    display: inline-block;
+    background-color: #ffc107; /* Gold */
+    color: #1a1a1a; /* Dark text on gold */
+    padding: 0.8rem 1.8rem;
+    text-decoration: none;
+    border-radius: 0.5rem;
+    font-size: 1.1rem;
+    font-weight: 500;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+}
+
+.cta-button:hover {
+    background-color: #d4ac0d; /* Darker gold on hover */
+    transform: translateY(-2px);
+}
+
+/* Main Content Styles */
+main {
+    padding: 3rem 0;
+    text-align: center;
+    max-width: 90%;
+    margin: auto;
+}
+
+main h2 {
+    font-size: 2rem;
+    font-weight: 600;
+    margin-bottom: 2rem;
+    color: #ffc107; /* Gold heading */
+    letter-spacing: -0.02em;
+    text-align: center;
+}
+
+main p {
+    font-size: 1.1rem;
+    color: #ddd;
+    margin-bottom: 2rem;
+}
+
+/* Services Styles */
+.services-preview {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 2rem;
+    margin-bottom: 2rem;
+    flex-wrap: wrap;
+}
+
+.service-card {
+    background-color: #2a2a2a; /* Darker service cards */
+    padding: 2rem;
+    border-radius: 0.75rem;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+    width: 300px;
+    text-align: center;
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+    border: 1px solid #333;
+}
+
+.service-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 6px 20px rgba(0, 0, 0, 0.4);
+}
+
+.service-card h3 {
+    font-size: 1.5rem;
+    font-weight: 600;
+    margin-bottom: 1rem;
+    color: #ffc107; /* Gold service title */
+    letter-spacing: -0.02em;
+}
+
+.service-card p {
+    font-size: 1.1rem;
+    color: #eee;
+    margin-bottom: 1rem;
+}
+
+.service-card ul {
+    list-style: none;
+    padding: 0;
+    margin-bottom: 0;
+}
+
+.service-card ul li {
+    font-size: 1rem;
+    color: #ddd;
+    margin-bottom: 0.5rem;
+    padding-left: 0;
+}
+
+/* Projects Styles */
+.projects-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+    gap: 2rem;
+    margin-top: 2rem;
+}
+
+.project-card {
+    background-color: #2a2a2a;
+    padding: 2rem;
+    border-radius: 0.75rem;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+    border: 1px solid #333;
+}
+
+.project-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 6px 20px rgba(0, 0, 0, 0.4);
+}
+
+.project-card img {
+    width: 100%;
+    border-radius: 0.5rem;
+    margin-bottom: 1rem;
+    height: 250px;
+    object-fit: cover;
+}
+
+.project-card h3 {
+    font-size: 1.5rem;
+    font-weight: 600;
+    margin-bottom: 0.5rem;
+    color: #ffc107; /* Gold project title */
+    letter-spacing: -0.02em;
+}
+
+.project-card p {
+    font-size: 1.1rem;
+    color: #ddd;
+    margin-bottom: 1rem;
+}
+
+.project-details {
+    margin-top: 1.5rem;
+    padding-top: 1.5rem;
+    border-top: 1px solid #444;
+}
+
+.project-details h4 {
+    font-size: 1.2rem;
+    font-weight: 600;
+    margin-bottom: 0.5rem;
+    color: #ffc107; /* Gold detail title */
+}
+
+.project-details ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.project-details ul li {
+    font-size: 1rem;
+    color: #eee;
+    margin-bottom: 0.25rem;
+    padding-left: 0;
+}
+
+/* About Us Styles */
+.company-overview {
+    background-color: #2a2a2a;
+    padding: 2rem;
+    border-radius: 0.75rem;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+    margin-bottom: 2rem;
+    border: 1px solid #333;
+}
+
+.company-overview p {
+    font-size: 1.1rem;
+    color: #ddd;
+}
+
+.team-section {
+    text-align: center;
+}
+
+.team-section h3 {
+    font-size: 1.5rem;
+    font-weight: 600;
+    margin-bottom: 1rem;
+    color: #ffc107; /* Gold team title */
+    text-align: center;
+}
+
+.team-members {
+    display: flex;
+    justify-content: center;
+    gap: 2rem;
+    margin-top: 2rem;
+    flex-wrap: wrap;
+}
+
+.team-member {
+    background-color: #333333;
+    padding: 1rem;
+    border-radius: 0.75rem;
+    width: 250px;
+    text-align: center;
+    border: 1px solid #444;
+}
+
+.team-member img {
+    width: 100%;
+    border-radius: 0.5rem;
+    margin-bottom: 1rem;
+}
+
+.team-member h4 {
+    font-size: 1.2rem;
+    font-weight: 600;
+    margin-bottom: 0.5rem;
+    color: #ffc107; /* Gold name */
+}
+
+.team-member p {
+    font-size: 1rem;
+    color: #eee;
+}
+
+/* Contact Us Styles */
+.contact-form {
+    background-color: #2a2a2a;
+    padding: 2rem;
+    border-radius: 0.75rem;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+    margin-bottom: 2rem;
+    border: 1px solid #333;
+}
+
+.contact-form form {
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+}
+
+.contact-form label {
+    font-size: 1.1rem;
+    font-weight: 500;
+    color: #ffc107; /* Gold label */
+    display: block;
+    margin-bottom: 0.5rem;
+}
+
+.contact-form input,
+.contact-form textarea {
+    padding: 0.75rem;
+    border: 1px solid #555;
+    border-radius: 0.5rem;
+    font-size: 1rem;
+    background-color: #444;
+    color: #eee;
+    transition: border-color 0.2s ease;
+}
+
+.contact-form input:focus,
+.contact-form textarea:focus {
+    outline: none;
+    border-color: #ffc107; /* Gold focus border */
+}
+
+.contact-form textarea {
+    resize: vertical;
+    height: 150px;
+}
+
+.contact-form button {
+    background-color: #ffc107; /* Gold button */
+    color: #1a1a1a;
+    padding: 0.8rem 1.8rem;
+    border: none;
+    border-radius: 0.5rem;
+    font-size: 1.1rem;
+    font-weight: 500;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+    align-self: flex-start;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+}
+
+.contact-form button:hover {
+    background-color: #d4ac0d;
+    transform: translateY(-2px);
+}
+
+.contact-info {
+    background-color: #2a2a2a;
+    padding: 2rem;
+    border-radius: 0.75rem;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+    border: 1px solid #333;
+}
+
+.contact-info h3 {
+    font-size: 1.5rem;
+    font-weight: 600;
+    margin-bottom: 1.5rem;
+    color: #ffc107; /* Gold info title */
+}
+
+.contact-info p {
+    font-size: 1.1rem;
+    color: #ddd;
+    margin-bottom: 1rem;
+}
+
+.contact-info a {
+    color: #ffc107;
+    text-decoration: none;
+    transition: color 0.2s ease;
+}
+
+.contact-info a:hover {
+    color: #fff59d;
+}
+
+/* Footer Styles */
+footer {
+    background-color: #1a1a1a;
+    color: #ffc107;
+    text-align: center;
+    padding: 1rem;
+    margin-top: 3rem;
+    border-top: 5px solid #d4ac0d;
+}
+
+/* Responsive Adjustments */
+@media (max-width: 768px) {
+    header h1 {
+        font-size: 2rem;
+    }
+
+    header p {
+        font-size: 1rem;
+        max-width: 95%;
+    }
+
+    nav ul {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    nav ul li {
+        margin: 1rem 0;
+    }
+
+    .services-preview {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .service-card {
+        width: 90%;
+        max-width: 350px;
+    }
+
+    .projects-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .contact-form {
+        padding: 1.5rem;
+    }
+
+    .contact-info {
+        padding: 1.5rem;
+    }
+}
