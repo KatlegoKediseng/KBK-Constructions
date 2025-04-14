@@ -3,18 +3,18 @@ body {
     font-family: 'Inter', sans-serif;
     margin: 0;
     padding: 0;
-    background-color: #1a1a1a; /* Dark background for body */
-    color: #eeeeee; /* Very light gray, almost off-white, for text */
+    background-color: #ffffff; /* White background for body */
+    color: #4a5568; /* Dark gray for text */
     line-height: 1.7;
 }
 
 /* Header Styles */
 header {
-    background-color: #222222; /* Slightly lighter header background */
-    color: #ffc107; /* Gold */
+    background-color: #ffc107; /* Yellow header background */
+    color: #4a5568; /* Dark gray for text */
     padding: 2rem 0;
     text-align: center;
-    border-bottom: 5px solid #d4ac0d; /* Darker gold accent */
+    border-bottom: 5px solid #d4ac0d; /* Darker yellow accent */
 }
 
 header h1 {
@@ -48,7 +48,7 @@ nav ul li {
 }
 
 nav a {
-    color: #ffc107;
+    color: #4a5568; /* Dark gray for nav links */
     text-decoration: none;
     font-size: 1.1rem;
     font-weight: 500;
@@ -56,24 +56,24 @@ nav a {
 }
 
 nav a:hover {
-    color: #fff59d; /* Lighter gold on hover */
+    color: #718096; /* Medium gray on hover */
 }
 
 .cta-button {
     display: inline-block;
-    background-color: #ffc107; /* Gold */
-    color: #1a1a1a; /* Dark text on gold */
+    background-color: #ffc107; /* Yellow */
+    color: #4a5568; /* Dark gray text on yellow */
     padding: 0.8rem 1.8rem;
     text-decoration: none;
     border-radius: 0.5rem;
     font-size: 1.1rem;
     font-weight: 500;
     transition: background-color 0.3s ease, transform 0.2s ease;
-    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
 }
 
 .cta-button:hover {
-    background-color: #d4ac0d; /* Darker gold on hover */
+    background-color: #d4ac0d; /* Darker yellow on hover */
     transform: translateY(-2px);
 }
 
@@ -89,14 +89,14 @@ main h2 {
     font-size: 2rem;
     font-weight: 600;
     margin-bottom: 2rem;
-    color: #ffc107; /* Gold heading */
+    color: #ffc107; /* Yellow heading */
     letter-spacing: -0.02em;
     text-align: center;
 }
 
 main p {
     font-size: 1.1rem;
-    color: #ddd;
+    color: #6b7280; /* Medium gray */
     margin-bottom: 2rem;
 }
 
@@ -111,32 +111,32 @@ main p {
 }
 
 .service-card {
-    background-color: #2a2a2a; /* Darker service cards */
+    background-color: #ffffff; /* White service cards */
     padding: 2rem;
     border-radius: 0.75rem;
-    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
     width: 300px;
     text-align: center;
     transition: transform 0.2s ease, box-shadow 0.2s ease;
-    border: 1px solid #333;
+    border: 1px solid #e2e8f0; /* Light gray border */
 }
 
 .service-card:hover {
     transform: translateY(-5px);
-    box-shadow: 0 6px 20px rgba(0, 0, 0, 0.4);
+    box-shadow: 0 6px 20px rgba(0, 0, 0, 0.1);
 }
 
 .service-card h3 {
     font-size: 1.5rem;
     font-weight: 600;
     margin-bottom: 1rem;
-    color: #ffc107; /* Gold service title */
+    color: #ffc107; /* Yellow service title */
     letter-spacing: -0.02em;
 }
 
 .service-card p {
     font-size: 1.1rem;
-    color: #eee;
+    color: #718096; /* Medium gray */
     margin-bottom: 1rem;
 }
 
@@ -148,7 +148,7 @@ main p {
 
 .service-card ul li {
     font-size: 1rem;
-    color: #ddd;
+    color: #6b7280; /* Medium gray */
     margin-bottom: 0.5rem;
     padding-left: 0;
 }
@@ -162,17 +162,17 @@ main p {
 }
 
 .project-card {
-    background-color: #2a2a2a;
+    background-color: #ffffff;
     padding: 2rem;
     border-radius: 0.75rem;
-    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
     transition: transform 0.2s ease, box-shadow 0.2s ease;
-    border: 1px solid #333;
+    border: 1px solid #e2e8f0; /* Light gray border */
 }
 
 .project-card:hover {
     transform: translateY(-5px);
-    box-shadow: 0 6px 20px rgba(0, 0, 0, 0.4);
+    box-shadow: 0 6px 20px rgba(0, 0, 0, 0.1);
 }
 
 .project-card img {
@@ -187,27 +187,27 @@ main p {
     font-size: 1.5rem;
     font-weight: 600;
     margin-bottom: 0.5rem;
-    color: #ffc107; /* Gold project title */
+    color: #ffc107; /* Yellow project title */
     letter-spacing: -0.02em;
 }
 
 .project-card p {
     font-size: 1.1rem;
-    color: #ddd;
+    color: #718096; /* Medium gray */
     margin-bottom: 1rem;
 }
 
 .project-details {
     margin-top: 1.5rem;
     padding-top: 1.5rem;
-    border-top: 1px solid #444;
+    border-top: 1px solid #e2e8f0; /* Light gray border */
 }
 
 .project-details h4 {
     font-size: 1.2rem;
     font-weight: 600;
     margin-bottom: 0.5rem;
-    color: #ffc107; /* Gold detail title */
+    color: #ffc107; /* Yellow detail title */
 }
 
 .project-details ul {
@@ -218,24 +218,24 @@ main p {
 
 .project-details ul li {
     font-size: 1rem;
-    color: #eee;
+    color: #6b7280; /* Medium gray */
     margin-bottom: 0.25rem;
     padding-left: 0;
 }
 
 /* About Us Styles */
 .company-overview {
-    background-color: #2a2a2a;
+    background-color: #ffffff;
     padding: 2rem;
     border-radius: 0.75rem;
-    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
     margin-bottom: 2rem;
-    border: 1px solid #333;
+    border: 1px solid #e2e8f0; /* Light gray border */
 }
 
 .company-overview p {
     font-size: 1.1rem;
-    color: #ddd;
+    color: #718096; /* Medium gray */
 }
 
 .team-section {
@@ -246,7 +246,7 @@ main p {
     font-size: 1.5rem;
     font-weight: 600;
     margin-bottom: 1rem;
-    color: #ffc107; /* Gold team title */
+    color: #ffc107; /* Yellow team title */
     text-align: center;
 }
 
@@ -259,12 +259,12 @@ main p {
 }
 
 .team-member {
-    background-color: #333333;
+    background-color: #ffffff;
     padding: 1rem;
     border-radius: 0.75rem;
     width: 250px;
     text-align: center;
-    border: 1px solid #444;
+    border: 1px solid #e2e8f0; /* Light gray border */
 }
 
 .team-member img {
@@ -277,22 +277,22 @@ main p {
     font-size: 1.2rem;
     font-weight: 600;
     margin-bottom: 0.5rem;
-    color: #ffc107; /* Gold name */
+    color: #ffc107; /* Yellow name */
 }
 
 .team-member p {
     font-size: 1rem;
-    color: #eee;
+    color: #718096; /* Medium gray */
 }
 
 /* Contact Us Styles */
 .contact-form {
-    background-color: #2a2a2a;
+    background-color: #ffffff;
     padding: 2rem;
     border-radius: 0.75rem;
-    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
     margin-bottom: 2rem;
-    border: 1px solid #333;
+    border: 1px solid #e2e8f0; /* Light gray border */
 }
 
 .contact-form form {
@@ -304,7 +304,7 @@ main p {
 .contact-form label {
     font-size: 1.1rem;
     font-weight: 500;
-    color: #ffc107; /* Gold label */
+    color: #ffc107; /* Yellow label */
     display: block;
     margin-bottom: 0.5rem;
 }
@@ -312,18 +312,18 @@ main p {
 .contact-form input,
 .contact-form textarea {
     padding: 0.75rem;
-    border: 1px solid #555;
+    border: 1px solid #ddd;
     border-radius: 0.5rem;
     font-size: 1rem;
-    background-color: #444;
-    color: #eee;
+    background-color: #ffffff;
+    color: #4a5568; /* Dark gray */
     transition: border-color 0.2s ease;
 }
 
 .contact-form input:focus,
 .contact-form textarea:focus {
     outline: none;
-    border-color: #ffc107; /* Gold focus border */
+    border-color: #ffc107; /* Yellow focus border */
 }
 
 .contact-form textarea {
@@ -332,8 +332,8 @@ main p {
 }
 
 .contact-form button {
-    background-color: #ffc107; /* Gold button */
-    color: #1a1a1a;
+    background-color: #ffc107; /* Yellow button */
+    color: #4a5568;
     padding: 0.8rem 1.8rem;
     border: none;
     border-radius: 0.5rem;
@@ -342,7 +342,7 @@ main p {
     cursor: pointer;
     transition: background-color 0.3s ease, transform 0.2s ease;
     align-self: flex-start;
-    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
 }
 
 .contact-form button:hover {
@@ -351,23 +351,23 @@ main p {
 }
 
 .contact-info {
-    background-color: #2a2a2a;
+    background-color: #ffffff;
     padding: 2rem;
     border-radius: 0.75rem;
-    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
-    border: 1px solid #333;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    border: 1px solid #e2e8f0; /* Light gray border */
 }
 
 .contact-info h3 {
     font-size: 1.5rem;
     font-weight: 600;
     margin-bottom: 1.5rem;
-    color: #ffc107; /* Gold info title */
+    color: #ffc107; /* Yellow info title */
 }
 
 .contact-info p {
     font-size: 1.1rem;
-    color: #ddd;
+    color: #718096; /* Medium gray */
     margin-bottom: 1rem;
 }
 
@@ -378,13 +378,13 @@ main p {
 }
 
 .contact-info a:hover {
-    color: #fff59d;
+    color: #d4ac0d;
 }
 
 /* Footer Styles */
 footer {
-    background-color: #1a1a1a;
-    color: #ffc107;
+    background-color: #ffffff; /* White footer */
+    color: #4a5568;
     text-align: center;
     padding: 1rem;
     margin-top: 3rem;
@@ -433,3 +433,21 @@ footer {
         padding: 1.5rem;
     }
 }
+
+  
+
+
+ 
+
+
+
+
+
+ 
+   
+   
+
+   
+
+    
+
