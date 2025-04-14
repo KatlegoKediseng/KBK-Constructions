@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Your Construction Company</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css"> </head>
+<body>
+    <header>
+        <h1>Your Construction Company</h1>
+        <p>Building надежность and инновации with expert hands.</p>
+        <a href="#services" class="cta-button">Explore Services</a>
+    </header>
+
+    <main id="services">
+        <h2>Our Services</h2>
+        <p>We offer a wide range of строительных услуг to meet your needs.</p>
+        <div class="services-preview">
+            <div class="service-card">
+                <h3>Residential Construction</h3>
+                <p>Building комфорт and style in every home.</p>
+            </div>
+            <div class="service-card">
+                <h3>Commercial Construction</h3>
+                <p>Creating functional and impressive commercial spaces.</p>
+            </div>
+             <div class="service-card">
+                <h3>Renovation and Remodeling</h3>
+                <p>Transforming existing spaces with современными решениями.</p>
+            </div>
+        </div>
+    </main>
+
+    <footer>
+        <p>&copy; 2025 Your Construction Company</p>
+    </footer>
+    <script>
+      document.addEventListener('DOMContentLoaded', () => {
+        const ctaButton = document.querySelector('.cta-button');
+        const servicesSection = document.getElementById('services');
+
+        ctaButton.addEventListener('click', (event) => {
+          event.preventDefault();
+          servicesSection.scrollIntoView({ behavior: 'smooth' });
+        });
+      });
+    </script>
+</body>
+</html>
