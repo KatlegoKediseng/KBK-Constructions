@@ -3,18 +3,22 @@ body {
     font-family: 'Inter', sans-serif;
     margin: 0;
     padding: 0;
-    background-color: #ffffff; /* White background for body */
-    color: #4a5568; /* Dark gray for text */
+    background-color: #ffffff; /* White background */
+    color: #2d3748; /* Dark gray text */
     line-height: 1.7;
 }
 
 /* Header Styles */
 header {
-    background-color: #ffc107; /* Yellow header background */
-    color: #4a5568; /* Dark gray for text */
-    padding: 2rem 0;
+    background-image: url('construction-workers.jpg'); /* Set background image */
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    color: #ffffff; /* White text for readability */
+    padding: 4rem 0;
     text-align: center;
-    border-bottom: 5px solid #d4ac0d; /* Darker yellow accent */
+    border-bottom: 5px solid #1e293b; /* Dark blue accent */
+    position: relative;
 }
 
 header h1 {
@@ -34,6 +38,7 @@ header p {
     margin-right: auto;
 }
 
+/* Navigation */
 nav ul {
     list-style: none;
     padding: 0;
@@ -48,7 +53,7 @@ nav ul li {
 }
 
 nav a {
-    color: #4a5568; /* Dark gray for nav links */
+    color: #ffffff; /* White nav links */
     text-decoration: none;
     font-size: 1.1rem;
     font-weight: 500;
@@ -56,28 +61,10 @@ nav a {
 }
 
 nav a:hover {
-    color: #718096; /* Medium gray on hover */
+    color: #cbd5e0; /* Light gray on hover */
 }
 
-.cta-button {
-    display: inline-block;
-    background-color: #ffc107; /* Yellow */
-    color: #4a5568; /* Dark gray text on yellow */
-    padding: 0.8rem 1.8rem;
-    text-decoration: none;
-    border-radius: 0.5rem;
-    font-size: 1.1rem;
-    font-weight: 500;
-    transition: background-color 0.3s ease, transform 0.2s ease;
-    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
-}
-
-.cta-button:hover {
-    background-color: #d4ac0d; /* Darker yellow on hover */
-    transform: translateY(-2px);
-}
-
-/* Main Content Styles */
+/* Main Content */
 main {
     padding: 3rem 0;
     text-align: center;
@@ -89,29 +76,21 @@ main h2 {
     font-size: 2rem;
     font-weight: 600;
     margin-bottom: 2rem;
-    color: #ffc107; /* Yellow heading */
-    letter-spacing: -0.02em;
+    color: #1e293b; /* Dark blue heading */
     text-align: center;
 }
 
-main p {
-    font-size: 1.1rem;
-    color: #6b7280; /* Medium gray */
-    margin-bottom: 2rem;
-}
-
-/* Services Styles */
+/* Services Cards */
 .services-preview {
     display: flex;
     justify-content: center;
     align-items: center;
     gap: 2rem;
-    margin-bottom: 2rem;
     flex-wrap: wrap;
 }
 
 .service-card {
-    background-color: #ffffff; /* White service cards */
+    background-color: #ffffff;
     padding: 2rem;
     border-radius: 0.75rem;
     box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
@@ -126,269 +105,14 @@ main p {
     box-shadow: 0 6px 20px rgba(0, 0, 0, 0.1);
 }
 
-.service-card h3 {
-    font-size: 1.5rem;
-    font-weight: 600;
-    margin-bottom: 1rem;
-    color: #ffc107; /* Yellow service title */
-    letter-spacing: -0.02em;
-}
-
-.service-card p {
-    font-size: 1.1rem;
-    color: #718096; /* Medium gray */
-    margin-bottom: 1rem;
-}
-
-.service-card ul {
-    list-style: none;
-    padding: 0;
-    margin-bottom: 0;
-}
-
-.service-card ul li {
-    font-size: 1rem;
-    color: #6b7280; /* Medium gray */
-    margin-bottom: 0.5rem;
-    padding-left: 0;
-}
-
-/* Projects Styles */
-.projects-grid {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
-    gap: 2rem;
-    margin-top: 2rem;
-}
-
-.project-card {
-    background-color: #ffffff;
-    padding: 2rem;
-    border-radius: 0.75rem;
-    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
-    transition: transform 0.2s ease, box-shadow 0.2s ease;
-    border: 1px solid #e2e8f0; /* Light gray border */
-}
-
-.project-card:hover {
-    transform: translateY(-5px);
-    box-shadow: 0 6px 20px rgba(0, 0, 0, 0.1);
-}
-
-.project-card img {
-    width: 100%;
-    border-radius: 0.5rem;
-    margin-bottom: 1rem;
-    height: 250px;
-    object-fit: cover;
-}
-
-.project-card h3 {
-    font-size: 1.5rem;
-    font-weight: 600;
-    margin-bottom: 0.5rem;
-    color: #ffc107; /* Yellow project title */
-    letter-spacing: -0.02em;
-}
-
-.project-card p {
-    font-size: 1.1rem;
-    color: #718096; /* Medium gray */
-    margin-bottom: 1rem;
-}
-
-.project-details {
-    margin-top: 1.5rem;
-    padding-top: 1.5rem;
-    border-top: 1px solid #e2e8f0; /* Light gray border */
-}
-
-.project-details h4 {
-    font-size: 1.2rem;
-    font-weight: 600;
-    margin-bottom: 0.5rem;
-    color: #ffc107; /* Yellow detail title */
-}
-
-.project-details ul {
-    list-style: none;
-    padding: 0;
-    margin: 0;
-}
-
-.project-details ul li {
-    font-size: 1rem;
-    color: #6b7280; /* Medium gray */
-    margin-bottom: 0.25rem;
-    padding-left: 0;
-}
-
-/* About Us Styles */
-.company-overview {
-    background-color: #ffffff;
-    padding: 2rem;
-    border-radius: 0.75rem;
-    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
-    margin-bottom: 2rem;
-    border: 1px solid #e2e8f0; /* Light gray border */
-}
-
-.company-overview p {
-    font-size: 1.1rem;
-    color: #718096; /* Medium gray */
-}
-
-.team-section {
-    text-align: center;
-}
-
-.team-section h3 {
-    font-size: 1.5rem;
-    font-weight: 600;
-    margin-bottom: 1rem;
-    color: #ffc107; /* Yellow team title */
-    text-align: center;
-}
-
-.team-members {
-    display: flex;
-    justify-content: center;
-    gap: 2rem;
-    margin-top: 2rem;
-    flex-wrap: wrap;
-}
-
-.team-member {
-    background-color: #ffffff;
-    padding: 1rem;
-    border-radius: 0.75rem;
-    width: 250px;
-    text-align: center;
-    border: 1px solid #e2e8f0; /* Light gray border */
-}
-
-.team-member img {
-    width: 100%;
-    border-radius: 0.5rem;
-    margin-bottom: 1rem;
-}
-
-.team-member h4 {
-    font-size: 1.2rem;
-    font-weight: 600;
-    margin-bottom: 0.5rem;
-    color: #ffc107; /* Yellow name */
-}
-
-.team-member p {
-    font-size: 1rem;
-    color: #718096; /* Medium gray */
-}
-
-/* Contact Us Styles */
-.contact-form {
-    background-color: #ffffff;
-    padding: 2rem;
-    border-radius: 0.75rem;
-    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
-    margin-bottom: 2rem;
-    border: 1px solid #e2e8f0; /* Light gray border */
-}
-
-.contact-form form {
-    display: flex;
-    flex-direction: column;
-    gap: 1.5rem;
-}
-
-.contact-form label {
-    font-size: 1.1rem;
-    font-weight: 500;
-    color: #ffc107; /* Yellow label */
-    display: block;
-    margin-bottom: 0.5rem;
-}
-
-.contact-form input,
-.contact-form textarea {
-    padding: 0.75rem;
-    border: 1px solid #ddd;
-    border-radius: 0.5rem;
-    font-size: 1rem;
-    background-color: #ffffff;
-    color: #4a5568; /* Dark gray */
-    transition: border-color 0.2s ease;
-}
-
-.contact-form input:focus,
-.contact-form textarea:focus {
-    outline: none;
-    border-color: #ffc107; /* Yellow focus border */
-}
-
-.contact-form textarea {
-    resize: vertical;
-    height: 150px;
-}
-
-.contact-form button {
-    background-color: #ffc107; /* Yellow button */
-    color: #4a5568;
-    padding: 0.8rem 1.8rem;
-    border: none;
-    border-radius: 0.5rem;
-    font-size: 1.1rem;
-    font-weight: 500;
-    cursor: pointer;
-    transition: background-color 0.3s ease, transform 0.2s ease;
-    align-self: flex-start;
-    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
-}
-
-.contact-form button:hover {
-    background-color: #d4ac0d;
-    transform: translateY(-2px);
-}
-
-.contact-info {
-    background-color: #ffffff;
-    padding: 2rem;
-    border-radius: 0.75rem;
-    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
-    border: 1px solid #e2e8f0; /* Light gray border */
-}
-
-.contact-info h3 {
-    font-size: 1.5rem;
-    font-weight: 600;
-    margin-bottom: 1.5rem;
-    color: #ffc107; /* Yellow info title */
-}
-
-.contact-info p {
-    font-size: 1.1rem;
-    color: #718096; /* Medium gray */
-    margin-bottom: 1rem;
-}
-
-.contact-info a {
-    color: #ffc107;
-    text-decoration: none;
-    transition: color 0.2s ease;
-}
-
-.contact-info a:hover {
-    color: #d4ac0d;
-}
-
-/* Footer Styles */
+/* Footer */
 footer {
-    background-color: #ffffff; /* White footer */
-    color: #4a5568;
+    background-color: #1e293b; /* Dark blue */
+    color: #ffffff;
     text-align: center;
     padding: 1rem;
     margin-top: 3rem;
-    border-top: 5px solid #d4ac0d;
+    border-top: 5px solid #2d3748;
 }
 
 /* Responsive Adjustments */
@@ -409,28 +133,6 @@ footer {
 
     nav ul li {
         margin: 1rem 0;
-    }
-
-    .services-preview {
-        flex-direction: column;
-        align-items: center;
-    }
-
-    .service-card {
-        width: 90%;
-        max-width: 350px;
-    }
-
-    .projects-grid {
-        grid-template-columns: 1fr;
-    }
-
-    .contact-form {
-        padding: 1.5rem;
-    }
-
-    .contact-info {
-        padding: 1.5rem;
     }
 }
 
