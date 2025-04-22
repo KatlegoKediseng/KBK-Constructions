@@ -10,15 +10,25 @@ body {
 
 /* Header Styles */
 header {
-    background-image: url('https://www.adp.com/-/media/adp/blog/articles/featuredimages/8/9/895044_construction-recruitment-bringing-young-talent-into-the-industry.jpg?rev=85f7fad1618540319e77e37ae41a5b9b&hash=7F0F8118D991D12A94B2A2FFE1D2451D'); /* Set background image */
-    background-size: cover;
-    background-position: center;
-    background-repeat: no-repeat;
-    color: #f2e58f; /* Light yellow text for readability */
-    padding: 4rem 0;
-    text-align: center;
-    border-bottom: 5px solid #1e293b; /* Dark blue accent */
     position: relative;
+    text-align: center;
+    color: #f2e58f; /* Light yellow text for readability */
+    border-bottom: 5px solid #1e293b; /* Dark blue accent */
+}
+
+.header-image {
+    width: 100%;
+    height: auto;
+    display: block;
+}
+
+.header-content {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background: rgba(0, 0, 0, 0.5); /* Semi-transparent background for readability */
+    padding: 1rem;
 }
 
 /* Navigation */
