@@ -11,55 +11,58 @@
 </head>
 <body>
     <header>
-         <img src="895044_Construction-Recruitment-Bringing-Young-Talent-into-the-Industry.jpg" alt="Construction Site" class="header-image" />
+        <img src="895044_Construction-Recruitment-Bringing-Young-Talent-into-the-Industry.jpg" alt="Construction Site" class="header-image" />
         <div class="header-content">
-        <h1>Our Projects</h1>
-        <p>A showcase of our commitment to качество and инновации.</p>
-         <nav>
-            <ul>
-                <li><a href="index.html">Home</a></li>
-                <li><a href="about.html">About Us</a></li>
-                <li><a href="services.html">Services</a></li>
-                <li><a href="projects.html">Projects</a></li>
-                <li><a href="contact.html">Contact Us</a></li>
-            </ul>
-        </nav>
-        </div> 
+            <h1>Our Projects</h1>
+            <p>A showcase of our commitment to качество and инновации.</p>
+            <nav>
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="about.html">About Us</a></li>
+                    <li><a href="services.html">Services</a></li>
+                    <li><a href="projects.html">Projects</a></li>
+                    <li><a href="contact.html">Contact Us</a></li>
+                </ul>
+            </nav>
+        </div>
     </header>
 
     <main>
         <h2>Project Portfolio</h2>
         <div class="projects-grid">
-            <div class="project-card">
-                <img src="https://github.com/KatlegoKediseng/KBK-Constructions/blob/main/home%20picture.jpg?raw=true" alt="Project 1: Residential Complex">
+            <div class="project-card" data-images='["https://github.com/KatlegoKediseng/KBK-Constructions/blob/main/home%20picture.jpg?raw=true", "https://github.com/KatlegoKediseng/KBK-Constructions/blob/main/home%20picture%202.jpeg?raw=true", "https://github.com/KatlegoKediseng/KBK-Constructions/blob/main/home%20picture%203.jpeg?raw=true"]'>
+                <div class="image-container">
+                    </div>
                 <h3>Residential Complex "Harmony Heights"</h3>
                 <p>A modern residential complex featuring luxurious home and world-class amenities.</p>
                 <div class="project-details">
                     <h4>Project Details</h4>
                     <ul>
                         <li>Location: Gaborone ,Phakalane</li>
-                        <li>Client: Mr Ramps </li>
+                        <li>Client: Diferent resident homes </li>
                         <li>Year Completed: 2024</li>
-                        <li>Type:Building</li>
+                        <li>Type: Building</li>
                     </ul>
                 </div>
             </div>
-            <div class="project-card">
-                <img src="https://github.com/KatlegoKediseng/KBK-Constructions/blob/main/tall%201.jpg?raw=true" alt="Project 2: Commercial Building">
+            <div class="project-card" data-images='["https://github.com/KatlegoKediseng/KBK-Constructions/blob/main/tall%201.jpg?raw=true", "https://github.com/KatlegoKediseng/KBK-Constructions/blob/main/tall%202.jpg?raw=true", "https://github.com/KatlegoKediseng/KBK-Constructions/blob/main/tall%203.jpeg?raw=true"]'>
+                <div class="image-container">
+                    </div>
                 <h3>Civil Building "Innovation Tower"</h3>
                 <p>A state-of-the-art office building designed for XYZ Corporation and collaboration.</p>
-                 <div class="project-details">
+                <div class="project-details">
                     <h4>Project Details</h4>
                     <ul>
-                        <li>Location:CBD Botswana</li>
+                        <li>Location: CBD Botswana</li>
                         <li>Client: XYZ Corporation</li>
                         <li>Year Completed: 2023</li>
                         <li>Type: Civil</li>
                     </ul>
                 </div>
             </div>
-            <div class="project-card">
-                <img src="https://github.com/KatlegoKediseng/KBK-Constructions/blob/main/electrical%201.jpg?raw=true" alt="Project 3: Infrastructure Project">
+            <div class="project-card" data-images='["https://github.com/KatlegoKediseng/KBK-Constructions/blob/main/electrical%201.jpg?raw=true", "https://github.com/KatlegoKediseng/KBK-Constructions/blob/main/electrical%202.jpg?raw=true", "https://github.com/KatlegoKediseng/KBK-Constructions/blob/main/electrical%203.jpeg?raw=true"]'>
+                <div class="image-container">
+                    </div>
                 <h3>Electrical Project "Grand Bridge"</h3>
                 <p>A major Electrical project improving connectivity .</p>
                 <div class="project-details">
@@ -78,6 +81,25 @@
     <footer>
         <p>&copy; 2025 Your Construction Company</p>
     </footer>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            const projectCards = document.querySelectorAll('.project-card');
+
+            projectCards.forEach(card => {
+                const imagesJson = card.getAttribute('data-images');
+                const imageUrls = JSON.parse(imagesJson);
+                const imageContainer = card.querySelector('.image-container');
+
+                imageUrls.forEach(imageUrl => {
+                    const img = document.createElement('img');
+                    img.src = imageUrl;
+                    img.alt = card.querySelector('h3').textContent; // Use project title as alt text
+                    imageContainer.appendChild(img);
+                });
+            });
+        });
+    </script>
 </body>
 </html>
-
+      
