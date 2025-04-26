@@ -3,8 +3,10 @@ body {
     font-family: 'Inter', sans-serif;
     margin: 0;
     padding: 0;
-    background-color: #ffffff; /* White background */
-    color: #333; /* Dark gray text for better contrast against white */
+    background-color: #ffffff;
+    /* White background */
+    color: #333;
+    /* Dark gray text for better contrast against white */
     line-height: 1.7;
 }
 
@@ -12,16 +14,22 @@ body {
 header {
     position: relative;
     text-align: center;
-    color: #fff; /* White text on the header image */
-    border-bottom: 5px solid #007bff; /* Blue accent color */
+    color: #fff;
+    /* White text on the header image */
+    border-bottom: 5px solid #007bff;
+    /* Blue accent color */
+    padding-bottom: 0; /* Remove default padding to control spacing better */
 }
 
 .header-image {
     width: 100%;
-    max-height: 400px; /* Adjust this value as needed */
-    object-fit: cover; /* Ensures the image covers the header area */
+    max-height: 400px;
+    /* Adjust this value as needed */
+    object-fit: cover;
+    /* Ensures the image covers the header area */
     display: block;
-    filter: brightness(80%); /* Slightly darken the image for better text contrast */
+    filter: brightness(80%);
+    /* Slightly darken the image for better text contrast */
 }
 
 .header-content {
@@ -29,43 +37,74 @@ header {
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
-    background: rgba(0, 0, 0, 0.6); /* Slightly darker semi-transparent background for better readability */
-    padding: 1.5rem; /* Slightly more padding */
-    border-radius: 5px; /* Optional: Add rounded corners to the background */
+    background: rgba(0, 0, 0, 0.6);
+    /* Slightly darker semi-transparent background for better readability */
+    padding: 1.5rem;
+    /* Slightly more padding */
+    border-radius: 5px;
+    /* Optional: Add rounded corners to the background */
+    width: 90%;
+    /* Adjust width as needed */
+    max-width: 800px;
+    /* Limit maximum width */
 }
 
 .header-content h1 {
-    font-size: 2.5rem; /* Larger heading */
+    font-size: 2.5rem;
+    /* Larger heading */
     margin-bottom: 0.5rem;
 }
 
 .header-content p {
     font-size: 1.2rem;
     font-weight: 300;
+    margin-bottom: 1rem;
+    /* Add some space below the tagline */
 }
 
 /* Navigation */
+nav {
+    background-color: rgba(0, 0, 0, 0.7);
+    /* Semi-transparent background for the nav */
+    padding: 1rem 0;
+    text-align: center;
+    /* Center the navigation links */
+}
+
 nav ul {
     list-style: none;
     padding: 0;
-    margin-top: 1rem;
+    margin: 0;
+    display: flex;
+    overflow-x: auto;
+    /* Enable horizontal scrolling for nav links */
+    white-space: nowrap;
+    /* Prevent links from wrapping */
+    margin: 0 -1rem;
+    /* Adjust margin to account for padding */
 }
 
 nav li {
     display: inline;
-    margin: 0 1rem;
+    margin: 0 0.5rem;
 }
 
 nav a {
-    color: #fff; /* White nav links */
+    color: #fff;
+    /* White nav links */
     text-decoration: none;
     font-size: 1.1rem;
     font-weight: 500;
     transition: color 0.3s ease;
+    padding: 0.5rem 0.75rem;
+    border-radius: 5px;
+    /* Add some background to make them touch-friendly */
+    background-color: rgba(0, 0, 0, 0.5);
 }
 
 nav a:hover {
-    color: #ddd; /* Light gray on hover */
+    color: #ddd;
+    /* Light gray on hover */
 }
 
 /* Main Content */
@@ -74,15 +113,18 @@ main {
 }
 
 main h2 {
-    font-size: 2.2rem; /* Slightly larger heading */
+    font-size: 2.2rem;
+    /* Slightly larger heading */
     font-weight: 600;
     margin-bottom: 1.5rem;
-    color: #007bff; /* Blue heading */
+    color: #007bff;
+    /* Blue heading */
     text-align: center;
 }
 
 main p {
-    color: #555; /* Darker gray paragraph text */
+    color: #555;
+    /* Darker gray paragraph text */
     margin-bottom: 1rem;
 }
 
@@ -95,7 +137,8 @@ main p {
 }
 
 .service-card {
-    background-color: #f9f9f9; /* Light gray card background */
+    background-color: #f9f9f9;
+    /* Light gray card background */
     padding: 1.5rem;
     border-radius: 8px;
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
@@ -103,12 +146,14 @@ main p {
 }
 
 .service-card h3 {
-    color: #007bff; /* Blue service title */
+    color: #007bff;
+    /* Blue service title */
     margin-bottom: 0.5rem;
 }
 
 .service-card p {
-    color: #666; /* Slightly lighter gray description */
+    color: #666;
+    /* Slightly lighter gray description */
     font-size: 0.95rem;
 }
 
@@ -151,7 +196,7 @@ main p {
 /* Projects Grid */
 .projects-grid {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
     gap: 2rem;
     margin-top: 2rem;
 }
@@ -161,12 +206,31 @@ main p {
     border-radius: 8px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
     overflow: hidden;
+    display: flex;
+    flex-direction: column; /* Arrange content vertically */
 }
 
-.project-card img {
-    width: 100%;
+.image-container {
+    display: flex;
+    overflow-x: auto;
+    /* Enable horizontal scrolling for images */
+    padding: 1rem;
+    /* Add some padding around the images */
+    gap: 10px;
+    /* Space between images */
+    background-color: #f9f9f9;
+    /* Light background for the image container */
+}
+
+.image-container img {
+    width: 150px;
+    /* Adjust as needed */
     height: auto;
     display: block;
+    border-radius: 4px;
+    object-fit: cover;
+    flex-shrink: 0;
+    /* Prevent images from shrinking */
 }
 
 .project-card h3 {
@@ -180,6 +244,8 @@ main p {
     color: #555;
     padding: 0 1rem 1rem;
     font-size: 0.95rem;
+    flex-grow: 1;
+    /* Allow paragraph to take up remaining vertical space */
 }
 
 .project-details {
@@ -351,7 +417,8 @@ main p {
 /* Call to Action Button */
 .cta-button {
     display: inline-block;
-    background-color: #28a745; /* Green CTA button */
+    background-color: #28a745;
+    /* Green CTA button */
     color: white;
     padding: 0.8rem 1.5rem;
     text-decoration: none;
@@ -367,11 +434,67 @@ main p {
 
 /* Footer */
 footer {
-    background-color: #343a40; /* Dark gray footer */
-    color: #f8f9fa; /* Light gray footer text */
+    background-color: #343a40;
+    /* Dark gray footer */
+    color: #f8f9fa;
+    /* Light gray footer text */
     text-align: center;
     padding: 1.5rem;
     margin-top: 3rem;
     border-top: 5px solid #212529;
     font-size: 0.9rem;
 }
+
+/* Responsive Styles */
+@media (max-width: 768px) {
+    .header-content h1 {
+        font-size: 2rem;
+    }
+
+    .header-content p {
+        font-size: 1rem;
+    }
+
+    nav {
+        padding: 0.5rem 0;
+        /* Reduce nav padding on smaller screens */
+    }
+
+    nav ul {
+        display: flex;
+        overflow-x: auto;
+        /* Enable horizontal scrolling for nav links */
+        white-space: nowrap;
+        /* Prevent links from wrapping */
+        margin: 0 -1rem;
+        /* Adjust margin to account for padding */
+    }
+
+    nav li {
+        margin: 0 0.5rem;
+    }
+
+    nav a {
+        font-size: 1rem;
+        padding: 0.5rem 0.75rem;
+        border-radius: 5px;
+        /* Add some background to make them touch-friendly */
+        background-color: rgba(0, 0, 0, 0.5);
+    }
+
+    .projects-grid {
+        grid-template-columns: 1fr;
+        /* Single column on smaller screens */
+    }
+
+    .image-container {
+        padding: 0.5rem;
+        /* Adjust image container padding */
+    }
+
+    .image-container img {
+        width: 120px;
+        /* Smaller image size on mobile */
+    }
+}
+
