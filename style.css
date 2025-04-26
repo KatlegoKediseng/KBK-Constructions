@@ -4,9 +4,7 @@ body {
     margin: 0;
     padding: 0;
     background-color: #ffffff;
-    /* White background */
     color: #333;
-    /* Dark gray text for better contrast against white */
     line-height: 1.7;
 }
 
@@ -15,21 +13,16 @@ header {
     position: relative;
     text-align: center;
     color: #fff;
-    /* White text on the header image */
     border-bottom: 5px solid #007bff;
-    /* Blue accent color */
-    padding-bottom: 0; /* Remove default padding to control spacing better */
+    padding-bottom: 0;
 }
 
 .header-image {
     width: 100%;
     max-height: 400px;
-    /* Adjust this value as needed */
     object-fit: cover;
-    /* Ensures the image covers the header area */
     display: block;
     filter: brightness(80%);
-    /* Slightly darken the image for better text contrast */
 }
 
 .header-content {
@@ -38,20 +31,14 @@ header {
     left: 50%;
     transform: translate(-50%, -50%);
     background: rgba(0, 0, 0, 0.6);
-    /* Slightly darker semi-transparent background for better readability */
     padding: 1.5rem;
-    /* Slightly more padding */
     border-radius: 5px;
-    /* Optional: Add rounded corners to the background */
     width: 90%;
-    /* Adjust width as needed */
     max-width: 800px;
-    /* Limit maximum width */
 }
 
 .header-content h1 {
     font-size: 2.5rem;
-    /* Larger heading */
     margin-bottom: 0.5rem;
 }
 
@@ -59,16 +46,13 @@ header {
     font-size: 1.2rem;
     font-weight: 300;
     margin-bottom: 1rem;
-    /* Add some space below the tagline */
 }
 
 /* Navigation */
 nav {
     background-color: rgba(0, 0, 0, 0.7);
-    /* Semi-transparent background for the nav */
     padding: 1rem 0;
     text-align: center;
-    /* Center the navigation links */
 }
 
 nav ul {
@@ -77,11 +61,8 @@ nav ul {
     margin: 0;
     display: flex;
     overflow-x: auto;
-    /* Enable horizontal scrolling for nav links */
     white-space: nowrap;
-    /* Prevent links from wrapping */
     margin: 0 -1rem;
-    /* Adjust margin to account for padding */
 }
 
 nav li {
@@ -91,20 +72,17 @@ nav li {
 
 nav a {
     color: #fff;
-    /* White nav links */
     text-decoration: none;
     font-size: 1.1rem;
     font-weight: 500;
     transition: color 0.3s ease;
     padding: 0.5rem 0.75rem;
     border-radius: 5px;
-    /* Add some background to make them touch-friendly */
     background-color: rgba(0, 0, 0, 0.5);
 }
 
 nav a:hover {
     color: #ddd;
-    /* Light gray on hover */
 }
 
 /* Main Content */
@@ -114,17 +92,14 @@ main {
 
 main h2 {
     font-size: 2.2rem;
-    /* Slightly larger heading */
     font-weight: 600;
     margin-bottom: 1.5rem;
     color: #007bff;
-    /* Blue heading */
     text-align: center;
 }
 
 main p {
     color: #555;
-    /* Darker gray paragraph text */
     margin-bottom: 1rem;
 }
 
@@ -138,7 +113,6 @@ main p {
 
 .service-card {
     background-color: #f9f9f9;
-    /* Light gray card background */
     padding: 1.5rem;
     border-radius: 8px;
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
@@ -147,13 +121,11 @@ main p {
 
 .service-card h3 {
     color: #007bff;
-    /* Blue service title */
     margin-bottom: 0.5rem;
 }
 
 .service-card p {
     color: #666;
-    /* Slightly lighter gray description */
     font-size: 0.95rem;
 }
 
@@ -207,30 +179,30 @@ main p {
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
     overflow: hidden;
     display: flex;
-    flex-direction: column; /* Arrange content vertically */
+    flex-direction: column;
 }
 
 .image-container {
     display: flex;
     overflow-x: auto;
-    /* Enable horizontal scrolling for images */
-    padding: 1rem;
-    /* Add some padding around the images */
     gap: 10px;
-    /* Space between images */
+    padding: 1rem;
     background-color: #f9f9f9;
-    /* Light background for the image container */
+    /* New styles for better image display */
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(100px, 1fr)); /* Adjust minmax as needed */
+    gap: 0.5rem; /* Reduced gap */
+    align-items: start; /* Align items to the start of the container */
 }
 
 .image-container img {
-    width: 150px;
-    /* Adjust as needed */
-    height: auto;
+    width: 100%;
+    height: 100px; /* Fixed height for consistency */
     display: block;
     border-radius: 4px;
     object-fit: cover;
     flex-shrink: 0;
-    /* Prevent images from shrinking */
+    aspect-ratio: 1;
 }
 
 .project-card h3 {
@@ -245,7 +217,6 @@ main p {
     padding: 0 1rem 1rem;
     font-size: 0.95rem;
     flex-grow: 1;
-    /* Allow paragraph to take up remaining vertical space */
 }
 
 .project-details {
@@ -418,7 +389,6 @@ main p {
 .cta-button {
     display: inline-block;
     background-color: #28a745;
-    /* Green CTA button */
     color: white;
     padding: 0.8rem 1.5rem;
     text-decoration: none;
@@ -435,9 +405,7 @@ main p {
 /* Footer */
 footer {
     background-color: #343a40;
-    /* Dark gray footer */
     color: #f8f9fa;
-    /* Light gray footer text */
     text-align: center;
     padding: 1.5rem;
     margin-top: 3rem;
@@ -457,17 +425,13 @@ footer {
 
     nav {
         padding: 0.5rem 0;
-        /* Reduce nav padding on smaller screens */
     }
 
     nav ul {
         display: flex;
         overflow-x: auto;
-        /* Enable horizontal scrolling for nav links */
         white-space: nowrap;
-        /* Prevent links from wrapping */
         margin: 0 -1rem;
-        /* Adjust margin to account for padding */
     }
 
     nav li {
@@ -478,23 +442,21 @@ footer {
         font-size: 1rem;
         padding: 0.5rem 0.75rem;
         border-radius: 5px;
-        /* Add some background to make them touch-friendly */
         background-color: rgba(0, 0, 0, 0.5);
     }
 
     .projects-grid {
         grid-template-columns: 1fr;
-        /* Single column on smaller screens */
     }
 
     .image-container {
         padding: 0.5rem;
-        /* Adjust image container padding */
     }
 
     .image-container img {
-        width: 120px;
-        /* Smaller image size on mobile */
+        width: 100%;
+        height: 100px;
     }
 }
+
 
