@@ -87,6 +87,31 @@ nav a:hover {
     color: #e0e0e0; /* Lighter grey on hover */
 }
 
+/* Media Query for Smartphones (adjust the max-width as needed) */
+@media (max-width: 768px) {
+    nav {
+        padding: 0.5rem 0; /* Reduce vertical padding */
+    }
+
+    nav ul {
+        /* You might want to change the layout to a stacked menu (hamburger) for very small screens */
+        display: flex;
+        flex-direction: column; /* Stack the links vertically */
+        align-items: center; /* Center the links */
+    }
+
+    nav li {
+        display: block; /* Make each list item take full width */
+        margin: 0.5rem 0; /* Add vertical spacing between links */
+    }
+
+    nav a {
+        font-size: 1rem; /* Slightly reduce font size */
+        padding: 0.75rem 1rem; /* Add some padding for touch targets */
+        display: block; /* Make the entire link clickable */
+    }
+}
+
 /* Main Content */
 main {
     padding: 3rem 2rem; /* Increased vertical padding */
@@ -451,7 +476,6 @@ footer {
     margin-top: 4rem;
     border-top: 3px solid #212529;
     font-size: 0.9rem;
-    opacity: 0.8;
-}
+    opacity
 
 
