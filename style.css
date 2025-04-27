@@ -3,25 +3,30 @@ body {
     font-family: 'Inter', sans-serif;
     margin: 0;
     padding: 0;
-    background-color: #ffffff; /* White background */
-    color: #333; /* Dark gray text for better contrast against white */
-    line-height: 1.7;
+    background-color: #f4f4f4; /* Light grey background */
+    color: #333; /* Dark grey text */
+    line-height: 1.6;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
 }
 
 /* Header Styles */
 header {
-    position: relative;
+    background-color: #fff; /* White header background */
+    color: #fff; /* Text color will be overridden by header-content */
+    padding: 2rem 0;
     text-align: center;
-    color: #fff; /* White text on the header image */
-    border-bottom: 5px solid #007bff; /* Blue accent color */
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    position: relative; /* For absolute positioning of header content */
+    overflow: hidden; /* Clip any overflowing image parts */
 }
 
 .header-image {
     width: 100%;
-    max-height: 400px; /* Adjust this value as needed */
-    object-fit: cover; /* Ensures the image covers the header area */
+    max-height: 450px; /* Slightly increased height */
+    object-fit: cover;
     display: block;
-    filter: brightness(80%); /* Slightly darken the image for better text contrast */
+    filter: brightness(70%); /* Slightly darker image */
 }
 
 .header-content {
@@ -29,35 +34,49 @@ header {
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
-    background: rgba(0, 0, 0, 0.6); /* Slightly darker semi-transparent background for better readability */
-    padding: 1.5rem; /* Slightly more padding */
-    border-radius: 5px; /* Optional: Add rounded corners to the background */
+    background: rgba(0, 37, 63, 0.75); /* Dark blue semi-transparent background */
+    color: #fff;
+    padding: 2rem;
+    border-radius: 8px;
+    text-align: center;
+    width: 80%; /* Adjust width as needed */
+    max-width: 960px;
 }
 
 .header-content h1 {
-    font-size: 2.5rem; /* Larger heading */
-    margin-bottom: 0.5rem;
+    font-size: 3rem; /* Larger, more impactful heading */
+    margin-bottom: 0.75rem;
+    font-weight: 600;
 }
 
 .header-content p {
     font-size: 1.2rem;
-    font-weight: 300;
+    font-weight: 400;
+    opacity: 0.9;
 }
 
 /* Navigation */
+nav {
+    background-color: #007bff; /* Primary blue navigation background */
+    padding: 1rem 0;
+    text-align: center;
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.05);
+}
+
 nav ul {
     list-style: none;
     padding: 0;
-    margin-top: 1rem;
+    margin: 0;
+    display: inline-block; /* Center the ul */
 }
 
 nav li {
     display: inline;
-    margin: 0 1rem;
+    margin: 0 1.5rem;
 }
 
 nav a {
-    color: #fff; /* White nav links */
+    color: #fff;
     text-decoration: none;
     font-size: 1.1rem;
     font-weight: 500;
@@ -65,76 +84,87 @@ nav a {
 }
 
 nav a:hover {
-    color: #ddd; /* Light gray on hover */
+    color: #e0e0e0; /* Lighter grey on hover */
 }
 
 /* Main Content */
 main {
-    padding: 2rem;
+    padding: 3rem 2rem; /* Increased vertical padding */
+    max-width: 1200px; /* Limit main content width for better readability */
+    margin: 0 auto; /* Center the main content */
 }
 
 main h2 {
-    font-size: 2.2rem; /* Slightly larger heading */
-    font-weight: 600;
-    margin-bottom: 1.5rem;
-    color: #007bff; /* Blue heading */
+    font-size: 2.5rem;
+    font-weight: 700;
+    margin-bottom: 2rem;
+    color: #007bff; /* Primary blue heading */
     text-align: center;
 }
 
 main p {
-    color: #555; /* Darker gray paragraph text */
-    margin-bottom: 1rem;
+    color: #555; /* Medium grey paragraph text */
+    margin-bottom: 1.2rem;
+    line-height: 1.7;
 }
 
 /* Services Preview on Home Page */
 .services-preview {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-    gap: 2rem;
-    margin-top: 2rem;
+    grid-template-columns: repeat(auto-fit, minmax(320px, 1fr)); /* Slightly wider min-width */
+    gap: 2.5rem; /* Increased gap */
+    margin-top: 2.5rem;
 }
 
 .service-card {
-    background-color: #f9f9f9; /* Light gray card background */
-    padding: 1.5rem;
+    background-color: #fff;
+    padding: 2rem; /* Increased padding */
     border-radius: 8px;
-    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.08); /* Softer shadow */
     text-align: center;
+    transition: transform 0.2s ease-in-out; /* Subtle hover effect */
+}
+
+.service-card:hover {
+    transform: translateY(-5px);
 }
 
 .service-card h3 {
-    color: #007bff; /* Blue service title */
-    margin-bottom: 0.5rem;
+    color: #0056b3; /* Darker blue service title */
+    margin-bottom: 1rem;
+    font-size: 1.5rem;
 }
 
 .service-card p {
-    color: #666; /* Slightly lighter gray description */
-    font-size: 0.95rem;
+    color: #777; /* Lighter grey description */
+    font-size: 1rem;
 }
 
 /* Services Grid on Services Page */
 .services-grid {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-    gap: 2rem;
-    margin-top: 2rem;
+    grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+    gap: 2.5rem;
+    margin-top: 2.5rem;
 }
 
 .services-grid .service-card {
-    background-color: #f9f9f9;
-    padding: 1.5rem;
+    background-color: #fff;
+    padding: 2rem;
     border-radius: 8px;
-    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.08);
 }
 
 .services-grid .service-card h3 {
-    color: #007bff;
-    margin-bottom: 0.75rem;
+    color: #0056b3;
+    margin-bottom: 1rem;
+    font-size: 1.5rem;
 }
 
 .services-grid .service-card p {
     color: #555;
-    margin-bottom: 1rem;
+    margin-bottom: 1.2rem;
+    font-size: 1rem;
 }
 
 .services-grid .service-card ul {
@@ -144,23 +174,33 @@ main p {
 
 .services-grid .service-card ul li {
     color: #777;
-    padding: 0.3rem 0;
-    font-size: 0.9rem;
+    padding: 0.5rem 0;
+    font-size: 0.95rem;
+    border-bottom: 1px solid #eee; /* Subtle dividers */
+}
+
+.services-grid .service-card ul li:last-child {
+    border-bottom: none;
 }
 
 /* Projects Grid */
 .projects-grid {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
-    gap: 2rem;
-    margin-top: 2rem;
+    grid-template-columns: repeat(auto-fit, minmax(380px, 1fr)); /* Slightly wider */
+    gap: 2.5rem;
+    margin-top: 2.5rem;
 }
 
 .project-card {
     background-color: #fff;
     border-radius: 8px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.1); /* More pronounced shadow */
     overflow: hidden;
+    transition: transform 0.2s ease-in-out;
+}
+
+.project-card:hover {
+    transform: translateY(-8px);
 }
 
 .project-card img {
@@ -171,28 +211,30 @@ main p {
 
 .project-card h3 {
     color: #007bff;
-    padding: 1rem;
+    padding: 1.2rem;
     margin-bottom: 0;
-    font-size: 1.5rem;
+    font-size: 1.6rem;
+    font-weight: 600;
 }
 
 .project-card p {
     color: #555;
-    padding: 0 1rem 1rem;
-    font-size: 0.95rem;
+    padding: 0 1.2rem 1.2rem;
+    font-size: 1.05rem;
 }
 
 .project-details {
     background-color: #f9f9f9;
-    padding: 1rem;
-    border-top: 1px solid #eee;
+    padding: 1.2rem;
+    border-top: 1px solid #ddd;
 }
 
 .project-details h4 {
     color: #333;
     margin-top: 0;
-    margin-bottom: 0.5rem;
-    font-size: 1.1rem;
+    margin-bottom: 0.75rem;
+    font-size: 1.2rem;
+    font-weight: 500;
 }
 
 .project-details ul {
@@ -202,38 +244,44 @@ main p {
 
 .project-details ul li {
     color: #777;
-    padding: 0.2rem 0;
-    font-size: 0.85rem;
+    padding: 0.4rem 0;
+    font-size: 0.95rem;
 }
 
 /* Contact Form */
 .contact-form {
-    background-color: #f9f9f9;
-    padding: 2rem;
+    background-color: #fff;
+    padding: 3rem; /* Increased padding */
     border-radius: 8px;
-    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-    margin-bottom: 2rem;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.08);
+    margin-bottom: 3rem;
+    max-width: 700px; /* Limit form width */
+    margin-left: auto;
+    margin-right: auto;
 }
 
 .contact-form h2 {
     color: #007bff;
-    text-align: left;
-    margin-bottom: 1.5rem;
+    text-align: center; /* Center the form heading */
+    margin-bottom: 2rem;
+    font-size: 2rem;
+    font-weight: 600;
 }
 
 .contact-form label {
     display: block;
-    margin-bottom: 0.5rem;
+    margin-bottom: 0.75rem;
     color: #333;
     font-weight: 500;
+    font-size: 1rem;
 }
 
 .contact-form input[type="text"],
 .contact-form input[type="email"],
 .contact-form textarea {
     width: 100%;
-    padding: 0.75rem;
-    margin-bottom: 1rem;
+    padding: 1rem; /* Increased padding */
+    margin-bottom: 1.5rem;
     border: 1px solid #ccc;
     border-radius: 4px;
     box-sizing: border-box;
@@ -243,18 +291,21 @@ main p {
 
 .contact-form textarea {
     resize: vertical;
-    min-height: 100px;
+    min-height: 150px; /* Increased min-height */
 }
 
 .contact-form button[type="submit"] {
     background-color: #007bff;
     color: white;
-    padding: 0.8rem 1.5rem;
+    padding: 1rem 2rem; /* Increased padding */
     border: none;
-    border-radius: 4px;
+    border-radius: 6px; /* Slightly more rounded */
     cursor: pointer;
-    font-size: 1rem;
+    font-size: 1.1rem;
     transition: background-color 0.3s ease;
+    font-weight: 500;
+    display: block; /* Make button full width */
+    width: 100%;
 }
 
 .contact-form button[type="submit"]:hover {
@@ -264,25 +315,32 @@ main p {
 /* Contact Info */
 .contact-info {
     background-color: #f9f9f9;
-    padding: 2rem;
+    padding: 3rem 2rem;
     border-radius: 8px;
-    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
+    text-align: center;
+    max-width: 700px;
+    margin: 0 auto 3rem;
 }
 
 .contact-info h3 {
     color: #007bff;
-    margin-bottom: 1rem;
+    margin-bottom: 1.5rem;
+    font-size: 1.8rem;
+    font-weight: 600;
 }
 
 .contact-info p {
     color: #555;
-    margin-bottom: 0.5rem;
+    margin-bottom: 1rem;
+    font-size: 1.05rem;
 }
 
 .contact-info a {
     color: #007bff;
     text-decoration: none;
     transition: color 0.3s ease;
+    font-weight: 500;
 }
 
 .contact-info a:hover {
@@ -292,88 +350,107 @@ main p {
 
 /* About Us Styles */
 .company-overview {
-    background-color: #f9f9f9;
-    padding: 2rem;
+    background-color: #fff;
+    padding: 3rem;
     border-radius: 8px;
-    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-    margin-bottom: 2rem;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.08);
+    margin-bottom: 3rem;
+}
+
+.company-overview h2 {
+    color: #007bff;
+    margin-bottom: 1.5rem;
+    font-size: 2rem;
+    font-weight: 600;
+    text-align: center;
 }
 
 .company-overview p {
     color: #555;
-    font-size: 1.05rem;
+    font-size: 1.1rem;
+    line-height: 1.7;
 }
 
 .team-section {
     text-align: center;
-    margin-top: 3rem;
+    margin-top: 4rem;
 }
 
 .team-section h3 {
     color: #007bff;
-    margin-bottom: 1rem;
+    margin-bottom: 1.5rem;
+    font-size: 1.8rem;
+    font-weight: 600;
+}
+
+.team-section p {
+    color: #777;
+    margin-bottom: 2rem;
 }
 
 .team-members {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
-    gap: 1.5rem;
-    margin-top: 1.5rem;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); /* Wider team member cards */
+    gap: 2rem;
+    margin-top: 2rem;
 }
 
 .team-member {
     background-color: #fff;
     border-radius: 8px;
-    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-    padding: 1rem;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
+    padding: 1.5rem;
     text-align: center;
 }
 
 .team-member img {
-    width: 80px;
-    height: 80px;
+    width: 100px; /* Slightly larger image */
+    height: 100px;
     border-radius: 50%;
     object-fit: cover;
-    margin-bottom: 0.5rem;
+    margin-bottom: 0.75rem;
 }
 
 .team-member h4 {
     color: #333;
-    margin-bottom: 0.2rem;
-    font-size: 1.1rem;
+    margin-bottom: 0.5rem;
+    font-size: 1.2rem;
+    font-weight: 500;
 }
 
 .team-member p {
     color: #777;
-    font-size: 0.9rem;
+    font-size: 0.95rem;
 }
 
 /* Call to Action Button */
 .cta-button {
     display: inline-block;
-    background-color: #28a745; /* Green CTA button */
+    background-color: #007bff; /* Primary blue CTA */
     color: white;
-    padding: 0.8rem 1.5rem;
+    padding: 1rem 2rem; /* Increased padding */
     text-decoration: none;
-    border-radius: 4px;
-    font-weight: 500;
-    transition: background-color 0.3s ease;
-    margin-top: 1rem;
+    border-radius: 6px; /* More rounded */
+    font-weight: 600;
+    transition: background-color 0.3s ease, transform 0.2s ease-in-out; /* Added transform */
+    margin-top: 2rem;
 }
 
 .cta-button:hover {
-    background-color: #1e7e34;
+    background-color: #0056b3;
+    transform: scale(1.05); /* Subtle scale on hover */
 }
 
 /* Footer */
 footer {
-    background-color: #343a40; /* Dark gray footer */
-    color: #f8f9fa; /* Light gray footer text */
+    background-color: #343a40; /* Dark grey footer */
+    color: #f8f9fa; /* Light grey footer text */
     text-align: center;
-    padding: 1.5rem;
-    margin-top: 3rem;
-    border-top: 5px solid #212529;
+    padding: 2rem; /* Increased padding */
+    margin-top: 4rem;
+    border-top: 3px solid #212529;
     font-size: 0.9rem;
+    opacity: 0.8;
 }
 
 
