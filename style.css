@@ -183,24 +183,24 @@ main p {
     border-bottom: none;
 }
 
-/* Projects Grid */
+/* Projects Grid - Further Reduced Spacing (Latest Version) */
 .projects-grid {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(380px, 1fr));
-    gap: 1.5rem; /* Reduced gap between cards */
-    margin-top: 2.5rem;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); /* Even smaller min-width */
+    gap: 0.75rem; /* Even smaller gap */
+    margin-top: 1.5rem; /* Further reduced top margin */
 }
 
 .project-card {
     background-color: #fff;
-    border-radius: 8px;
-    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.1);
+    border-radius: 6px; /* Slightly less rounded */
+    box-shadow: 0 3px 6px rgba(0, 0, 0, 0.06); /* Even softer shadow */
     overflow: hidden;
     transition: transform 0.2s ease-in-out;
 }
 
 .project-card:hover {
-    transform: translateY(-8px);
+    transform: translateY(-3px); /* Even less hover lift */
 }
 
 .project-card img {
@@ -211,29 +211,30 @@ main p {
 
 .project-card h3 {
     color: #007bff;
-    padding: 0.8rem; /* Reduced padding */
-    margin-bottom: 0;
-    font-size: 1.6rem;
+    padding: 0.5rem; /* Further reduced padding */
+    margin-bottom: 0.1rem; /* Very small bottom margin */
+    font-size: 1.3rem; /* Even smaller title */
     font-weight: 600;
 }
 
 .project-card p {
     color: #555;
-    padding: 0 0.8rem 0.8rem; /* Reduced padding */
-    font-size: 1.05rem;
+    padding: 0 0.5rem 0.5rem; /* Further reduced padding */
+    margin-bottom: 0.3rem; /* Very small bottom margin */
+    font-size: 0.9rem; /* Even smaller description */
 }
 
 .project-details {
     background-color: #f9f9f9;
-    padding: 0.8rem; /* Reduced padding */
+    padding: 0.5rem; /* Further reduced padding */
     border-top: 1px solid #ddd;
 }
 
 .project-details h4 {
     color: #333;
     margin-top: 0;
-    margin-bottom: 0.5rem; /* Reduced margin */
-    font-size: 1.2rem;
+    margin-bottom: 0.2rem; /* Extremely small bottom margin */
+    font-size: 1rem; /* Even smaller heading */
     font-weight: 500;
 }
 
@@ -244,8 +245,8 @@ main p {
 
 .project-details ul li {
     color: #777;
-    padding: 0.2rem 0; /* Reduced padding */
-    font-size: 0.95rem;
+    padding: 0.1rem 0; /* Extremely small vertical padding */
+    font-size: 0.8rem; /* Even smaller list item text */
 }
 
 /* Contact Form */
@@ -404,10 +405,10 @@ main p {
 }
 
 .team-member img {
-    width: 100px; /* Slightly larger image */
-    height: 100px;
-    border-radius: 50%;
+    width: 200px; /* Increased image size */
+    height: auto;
     object-fit: cover;
+    border-radius: 50%;
     margin-bottom: 0.75rem;
 }
 
