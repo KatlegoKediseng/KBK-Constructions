@@ -11,20 +11,21 @@
 </head>
 <body>
     <header>
-          <img src="895044_Construction-Recruitment-Bringing-Young-Talent-into-the-Industry.jpg" alt="Construction Site" class="header-image" />
+         <img src="895044_Construction-Recruitment-Bringing-Young-Talent-into-the-Industry.jpg" alt="Construction Site" class="header-image" />
         <div class="header-content">
         <h1>Our Services</h1>
         <p>We offer a wide range of Construction Services to meet your needs.</p>
          <nav>
             <ul>
-                <li><a href="index.html">Home</a></li>
-                <li><a href="about.html">About Us</a></li>
-                <li><a href="services.html">Services</a></li>
-                <li><a href="projects.html">Projects</a></li>
-                <li><a href="contact.html">Contact Us</a></li>
+                <li class="nav-item"><a href="index.html">Home</a></li>
+                <li class="nav-item"><a href="about.html">About Us</a></li>
+                <li class="nav-item"><a href="services.html">Services</a></li>
+                <li class="nav-item more-link"><a href="#">More</a></li>
+                <li class="nav-item hidden"><a href="projects.html">Projects</a></li>
+                <li class="nav-item hidden"><a href="contact.html">Contact Us</a></li>
             </ul>
         </nav>
-        </div>    
+        </div>     
     </header>
 
     <main>
@@ -52,9 +53,9 @@
                 <h3>Electrical Constructions</h3>
                 <p>Constructing the foundations for a better future.</p>
                 <ul>
-                  <li>Roads and Bridges</li>
-                  <li>Electrical Systems</li>
-                  <li>Public Works Projects</li>
+                    <li>Roads and Bridges</li>
+                    <li>Electrical Systems</li>
+                    <li>Public Works Projects</li>
                 </ul>
             </div>
             <div class="service-card">
@@ -72,5 +73,22 @@
     <footer>
         <p>&copy; 2025 Reagile Construction Company</p>
     </footer>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            const moreLink = document.querySelector('.more-link a');
+            const hiddenItems = document.querySelectorAll('.nav-item.hidden');
+
+            if (moreLink) {
+                moreLink.addEventListener('click', (event) => {
+                    event.preventDefault();
+                    hiddenItems.forEach(item => {
+                        item.classList.toggle('hidden');
+                    });
+                    moreLink.textContent = moreLink.textContent === 'More' ? 'Less' : 'More';
+                });
+            }
+        });
+    </script>
 </body>
 </html>
