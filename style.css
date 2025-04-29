@@ -8,6 +8,7 @@ body {
     line-height: 1.6;
     width: 1024px; /* fixed width for all devices */
     overflow-x: auto; /* allow scroll on small screens */
+    min-width: 1024px;
 }
 
 
