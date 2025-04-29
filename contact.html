@@ -17,14 +17,15 @@
         <p>Get in touch with us for inquiries, quotes, or to discuss your project.</p>
          <nav>
             <ul>
-                <li><a href="index.html">Home</a></li>
-                <li><a href="about.html">About Us</a></li>
-                <li><a href="services.html">Services</a></li>
-                <li><a href="projects.html">Projects</a></li>
-                <li><a href="contact.html">Contact Us</a></li>
+                <li class="nav-item"><a href="index.html">Home</a></li>
+                <li class="nav-item"><a href="about.html">About Us</a></li>
+                <li class="nav-item"><a href="services.html">Services</a></li>
+                <li class="nav-item more-link"><a href="#">More</a></li>
+                <li class="nav-item hidden"><a href="projects.html">Projects</a></li>
+                <li class="nav-item hidden"><a href="contact.html">Contact Us</a></li>
             </ul>
         </nav>
-       </div>
+        </div>
     </header>
 
     <main>
@@ -55,32 +56,46 @@
     <script>
         document.addEventListener('DOMContentLoaded', () => {
             const form = document.querySelector('.contact-form form');
+            const moreLink = document.querySelector('.more-link a');
+            const hiddenItems = document.querySelectorAll('.nav-item.hidden');
 
-            form.addEventListener('submit', (event) => {
-                event.preventDefault();
+            if (form) {
+                form.addEventListener('submit', (event) => {
+                    event.preventDefault();
 
-                const name = document.getElementById('name').value;
-                const email = document.getElementById('email').value;
-                const message = document.getElementById('message').value;
+                    const name = document.getElementById('name').value;
+                    const email = document.getElementById('email').value;
+                    const message = document.getElementById('message').value;
 
-                if (name.trim() === '' || email.trim() === '' || message.trim() === '') {
-                    alert('Please fill in all fields.');
-                    return;
+                    if (name.trim() === '' || email.trim() === '' || message.trim() === '') {
+                        alert('Please fill in all fields.');
+                        return;
+                    }
+
+                    if (!isValidEmail(email)) {
+                        alert('Please enter a valid email address.');
+                        return;
+                    }
+
+                    console.log('Form submitted:', { name, email, message });
+                    alert('Your message has been sent successfully!');
+                    form.reset();
+                });
+
+                function isValidEmail(email) {
+                    const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+                    return emailRegex.test(email);
                 }
+            }
 
-                if (!isValidEmail(email)) {
-                    alert('Please enter a valid email address.');
-                    return;
-                }
-
-                console.log('Form submitted:', { name, email, message });
-                alert('Your message has been sent successfully!');
-                form.reset();
-            });
-
-            function isValidEmail(email) {
-                const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
-                return emailRegex.test(email);
+            if (moreLink) {
+                moreLink.addEventListener('click', (event) => {
+                    event.preventDefault();
+                    hiddenItems.forEach(item => {
+                        item.classList.toggle('hidden');
+                    });
+                    moreLink.textContent = moreLink.textContent === 'More' ? 'Less' : 'More';
+                });
             }
         });
     </script>
