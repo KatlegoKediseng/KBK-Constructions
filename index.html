@@ -17,11 +17,12 @@
             <p>Building Together, Stronger Together..</p>
             <nav>
                 <ul>
-                    <li><a href="index.html">Home</a></li>
-                    <li><a href="about.html">About Us</a></li>
-                    <li><a href="services.html">Services</a></li>
-                    <li><a href="projects.html">Projects</a></li>
-                    <li><a href="contact.html">Contact Us</a></li>
+                    <li class="nav-item"><a href="index.html">Home</a></li>
+                    <li class="nav-item"><a href="about.html">About Us</a></li>
+                    <li class="nav-item"><a href="services.html">Services</a></li>
+                    <li class="nav-item more-link"><a href="#">More</a></li>
+                    <li class="nav-item hidden"><a href="projects.html">Projects</a></li>
+                    <li class="nav-item hidden"><a href="contact.html">Contact Us</a></li>
                 </ul>
             </nav>
             <a href="services.html" class="cta-button">Explore Services</a>
@@ -60,11 +61,25 @@
     <script>
         document.addEventListener('DOMContentLoaded', () => {
             const ctaButton = document.querySelector('.cta-button');
+            const moreLink = document.querySelector('.more-link a');
+            const hiddenItems = document.querySelectorAll('.nav-item.hidden');
 
-            ctaButton.addEventListener('click', (event) => {
-                event.preventDefault();
-                window.location.href = "services.html";
-            });
+            if (ctaButton) {
+                ctaButton.addEventListener('click', (event) => {
+                    event.preventDefault();
+                    window.location.href = "services.html";
+                });
+            }
+
+            if (moreLink) {
+                moreLink.addEventListener('click', (event) => {
+                    event.preventDefault();
+                    hiddenItems.forEach(item => {
+                        item.classList.toggle('hidden');
+                    });
+                    moreLink.textContent = moreLink.textContent === 'More' ? 'Less' : 'More';
+                });
+            }
         });
     </script>
 </body>
