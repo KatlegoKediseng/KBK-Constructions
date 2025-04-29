@@ -67,12 +67,22 @@ nav ul {
     list-style: none;
     padding: 0;
     margin: 0;
-    display: inline-block; /* Center the ul */
+    display: flex; /* Keep items in a row */
+    align-items: center; /* Vertically align items */
+    justify-content: center; /* Center the links horizontally */
 }
 
-nav li {
-    display: inline;
-    margin: 0 1.5rem;
+nav li.nav-item {
+    margin-right: 1.5rem;
+}
+
+nav li.more-link {
+    /* Style the 'More' link */
+    cursor: pointer;
+}
+
+nav li.hidden {
+    display: none; /* Initially hide extra items */
 }
 
 nav a {
@@ -94,15 +104,18 @@ nav a:hover {
     }
 
     nav ul {
-        /* You might want to change the layout to a stacked menu (hamburger) for very small screens */
-        display: flex;
         flex-direction: column; /* Stack the links vertically */
         align-items: center; /* Center the links */
+        width: 100%; /* Make the list take full width */
     }
 
-    nav li {
+    nav li.nav-item,
+    nav li.more-link,
+    nav li.hidden {
         display: block; /* Make each list item take full width */
         margin: 0.5rem 0; /* Add vertical spacing between links */
+        width: 100%;
+        text-align: center; /* Center the text */
     }
 
     nav a {
@@ -471,11 +484,4 @@ main p {
 footer {
     background-color: #343a40; /* Dark grey footer */
     color: #f8f9fa; /* Light grey footer text */
-    text-align: center;
-    padding: 2rem; /* Increased padding */
-    margin-top: 4rem;
-    border-top: 3px solid #212529;
-    font-size: 0.9rem;
-    opacity
-
-
+    text-align:
