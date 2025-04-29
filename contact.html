@@ -7,24 +7,23 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="style.css">
-</head>
+    </head>
 <body>
     <header>
         <img src="895044_Construction-Recruitment-Bringing-Young-Talent-into-the-Industry.jpg" alt="Construction Site" class="header-image" />
         <div class="header-content">
-        <h1>Contact Us</h1>
-        <p>Get in touch with us for inquiries, quotes, or to discuss your project.</p>
-         <nav>
-            <ul>
-                <li class="nav-item"><a href="index.html">Home</a></li>
-                <li class="nav-item"><a href="about.html">About Us</a></li>
-                <li class="nav-item"><a href="services.html">Services</a></li>
-                <li class="nav-item more-link"><a href="#">More</a></li>
-                <li class="nav-item hidden"><a href="projects.html">Projects</a></li>
-                <li class="nav-item hidden"><a href="contact.html">Contact Us</a></li>
-            </ul>
-        </nav>
+            <h1>Contact Us</h1>
+            <p>Get in touch with us for inquiries, quotes, or to discuss your project.</p>
+            <nav>
+                <button class="menu-button">Menu</button>
+                <ul>
+                    <li class="nav-item"><a href="index.html">Home</a></li>
+                    <li class="nav-item"><a href="about.html">About Us</a></li>
+                    <li class="nav-item"><a href="services.html">Services</a></li>
+                    <li class="nav-item"><a href="projects.html">Projects</a></li>
+                    <li class="nav-item"><a href="contact.html">Contact Us</a></li>
+                </ul>
+            </nav>
         </div>
     </header>
 
@@ -55,10 +54,17 @@
     </footer>
     <script>
         document.addEventListener('DOMContentLoaded', () => {
-            const form = document.querySelector('.contact-form form');
-            const moreLink = document.querySelector('.more-link a');
-            const hiddenItems = document.querySelectorAll('.nav-item.hidden');
+            const menuButton = document.querySelector('.menu-button');
+            const nav = document.querySelector('nav');
 
+            if (menuButton && nav) {
+                menuButton.addEventListener('click', () => {
+                    nav.classList.toggle('open');
+                });
+            }
+
+
+            const form = document.querySelector('.contact-form form');
             if (form) {
                 form.addEventListener('submit', (event) => {
                     event.preventDefault();
@@ -86,16 +92,6 @@
                     const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
                     return emailRegex.test(email);
                 }
-            }
-
-            if (moreLink) {
-                moreLink.addEventListener('click', (event) => {
-                    event.preventDefault();
-                    hiddenItems.forEach(item => {
-                        item.classList.toggle('hidden');
-                    });
-                    moreLink.textContent = moreLink.textContent === 'More' ? 'Less' : 'More';
-                });
             }
         });
     </script>
