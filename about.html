@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=1024">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Reagile Construction Company</title>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -11,66 +11,102 @@
 </head>
 <body>
     <div class="site-wrapper">
-        <header>
+        <header class="full-width-header">
             <img src="895044_Construction-Recruitment-Bringing-Young-Talent-into-the-Industry.jpg" alt="Construction site with workers and equipment" class="header-image" />
             <div class="header-content">
                 <h1>Reagile Construction Company</h1>
-                <p>Building Together, Stronger Together..</p>
-                <nav>
-                    <button class="menu-button">Menu</button>
-                    <ul>
+                <p>Building Together, Stronger Together.</p>
+                <nav class="desktop-nav">
+                    <ul class="main-nav">
                         <li class="nav-item"><a href="index.html">Home</a></li>
-                        <li class="nav-item"><a href="about.html">About Us</a></li>
-                        <li class="nav-item"><a href="services.html">Services</a></li>
+                        <li class="nav-item has-dropdown">
+                            <a href="#">About Us</a>
+                            <ul class="dropdown">
+                                <li><a href="about.html">Our Story</a></li>
+                                <li><a href="#">Our Team</a></li>
+                                <li><a href="#">Our Values</a></li>
+                            </ul>
+                        </li>
+                        <li class="nav-item has-dropdown">
+                            <a href="#">Services</a>
+                            <ul class="dropdown">
+                                <li><a href="services.html">All Services</a></li>
+                                <li><a href="#">Building Construction</a></li>
+                                <li><a href="#">Civil Construction</a></li>
+                                <li><a href="#">Electrical Construction</a></li>
+                                <li><a href="#">Project Management</a></li>
+                                <li><a href="#">Other Services</a></li>
+                            </ul>
+                        </li>
                         <li class="nav-item"><a href="projects.html">Projects</a></li>
                         <li class="nav-item"><a href="contact.html">Contact Us</a></li>
                     </ul>
                 </nav>
                 <a href="services.html" class="cta-button">Explore Services</a>
             </div>
+            <button class="menu-button mobile-menu-button">Menu</button>
+            <nav class="mobile-nav">
+                <ul>
+                    <li class="nav-item"><a href="index.html">Home</a></li>
+                    <li class="nav-item"><a href="about.html">About Us</a></li>
+                    <li class="nav-item"><a href="services.html">Services</a></li>
+                    <li class="nav-item"><a href="projects.html">Projects</a></li>
+                    <li class="nav-item"><a href="contact.html">Contact Us</a></li>
+                </ul>
+            </nav>
         </header>
-    <main>
-        <h2>Company Overview</h2>
-        <div class="company-overview">
-            <p>Reagile Construction Company, based in Gaborone, Botswana, has been a leading construction firm for the past five years. With a passion for building – or as we say in Setswana, "reagile" – and a strong commitment to quality, we specialize in a wide range of projects, including building construction, civil construction, and electrical construction. As CEO, it was my vision to root our company's identity in our local heritage, hence the name "Reagile," symbolizing the very essence of our work. We pride ourselves on our dedication to client satisfaction, innovative solutions, and sustainable practices, transforming the landscape of our communities.</p>
-        </div>
+        <main>
+            <h2>Company Overview</h2>
+            <div class="company-overview">
+                <p>Reagile Construction Company, based in Gaborone, Botswana, has been a leading construction firm for the past five years. With a passion for building – or as we say in Setswana, "reagile" – and a strong commitment to quality, we specialize in a wide range of projects, including building construction, civil construction, and electrical construction. As CEO, it was my vision to root our company's identity in our local heritage, hence the name "Reagile," symbolizing the very essence of our work. We pride ourselves on our dedication to client satisfaction, innovative solutions, and sustainable practices, transforming the landscape of our communities.</p>
+            </div>
 
-        <div class="team-section">
-            <h3>Meet Our Team</h3>
-            <p>A group of dedicated professionals with a passion for construction.</p>
-            <div class="team-members">
-                <div class="team-member">
-                    <img src="https://github.com/KatlegoKediseng/KBK-Constructions/blob/main/Ceooo.jpg?raw=true" alt="Team Member 1">
-                    <h4>Katlego Kediseng</h4>
-                    <p>CEO</p>
-                </div>
-                <div class="team-member">
-                    <img src="https://github.com/KatlegoKediseng/KBK-Constructions/blob/main/black.jpg?raw=true" alt="Team Member 2">
-                    <h4>Jane Deo</h4>
-                    <p>Project Manager</p>
-                </div>
-                <div class="team-member">
-                    <img src="https://github.com/KatlegoKediseng/KBK-Constructions/blob/main/project%20manager.jpg?raw=true" alt="Team Member 3">
-                    <h4>David Johnson</h4>
-                    <p>Senior Architect</p>
+            <div class="team-section">
+                <h3>Meet Our Team</h3>
+                <p>A group of dedicated professionals with a passion for construction.</p>
+                <div class="team-members">
+                    <div class="team-member">
+                        <img src="https://github.com/KatlegoKediseng/KBK-Constructions/blob/main/Ceooo.jpg?raw=true" alt="Team Member 1">
+                        <h4>Katlego Kediseng</h4>
+                        <p>CEO</p>
+                    </div>
+                    <div class="team-member">
+                        <img src="https://github.com/KatlegoKediseng/KBK-Constructions/blob/main/black.jpg?raw=true" alt="Team Member 2">
+                        <h4>Jane Deo</h4>
+                        <p>Project Manager</p>
+                    </div>
+                    <div class="team-member">
+                        <img src="https://github.com/KatlegoKediseng/KBK-Constructions/blob/main/project%20manager.jpg?raw=true" alt="Team Member 3">
+                        <h4>David Johnson</h4>
+                        <p>Senior Architect</p>
+                    </div>
                 </div>
             </div>
-        </div>
-    </main>
+        </main>
 
-    <footer>
-        <p>&copy; 2025 Reagile Construction Company</p>
-    </footer>
+        <footer>
+            <p>&copy; 2025 Reagile Construction Company</p>
+        </footer>
+    </div>
     <script>
         document.addEventListener('DOMContentLoaded', () => {
-            const menuButton = document.querySelector('.menu-button');
-            const nav = document.querySelector('nav');
+            const mobileMenuButton = document.querySelector('.mobile-menu-button');
+            const mobileNav = document.querySelector('.mobile-nav');
+            const dropdownLinks = document.querySelectorAll('.has-dropdown > a');
 
-            if (menuButton && nav) {
-                menuButton.addEventListener('click', () => {
-                    nav.classList.toggle('open');
+            if (mobileMenuButton && mobileNav) {
+                mobileMenuButton.addEventListener('click', () => {
+                    mobileNav.classList.toggle('open');
                 });
             }
+
+            dropdownLinks.forEach(link => {
+                link.addEventListener('click', (e) => {
+                    e.preventDefault();
+                    const dropdown = link.nextElementSibling;
+                    dropdown.classList.toggle('open');
+                });
+            });
         });
     </script>
 </body>
