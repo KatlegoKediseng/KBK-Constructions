@@ -519,4 +519,13 @@ main p {
 
 .team-section p {
     color: #777;
-    margin-bottom:
+    margin-bottom: 2rem;
+}
+
+.team-members {
+    display: flex;
+    flex-direction: column; /* Stack items vertically */
+    align-items: center; /* Center items horizontally within the row */
+    gap: 20px; /* Maintain spacing between team members */
+    margin-top: 2rem;
+}
