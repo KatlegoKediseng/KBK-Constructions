@@ -1,36 +1,45 @@
 /* Global Styles */
 body {
     font-family: 'Inter', sans-serif;
-    margin: 0 auto;
+    margin: 0; /* Remove fixed width and center */
     padding: 0;
     background-color: #f4f4f4;
     color: #333;
     line-height: 1.6;
-    width: 1024px; /* fixed width for all devices */
-    overflow-x: auto; /* allow scroll on small screens */
-    min-width: 1024px;
+    overflow-x: hidden; /* Prevent horizontal scroll */
+    min-width: auto; /* Allow body to shrink */
 }
 
+.site-wrapper {
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+    max-width: 1200px; /* Optional: Constrain overall width on large screens */
+    margin: 0 auto; /* Center the layout */
+}
 
 /* Header Styles */
 header {
     background-color: #fff;
     color: #fff;
-    padding: 2rem 0;
+    padding: 1rem 20px; /* Adjust padding for responsiveness */
     text-align: center;
     box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
     position: relative;
     overflow: hidden;
+    display: flex;
+    flex-direction: column;
+    align-items: center; /* Center content by default */
 }
 
 .header-image {
-    width: 1024px; /* fixed to match body */
-    height: 450px;
+    width: 100%; /* Make image responsive */
+    height: auto;
+    max-height: 450px; /* Limit image height */
     object-fit: cover;
     display: block;
     filter: brightness(70%);
 }
-
 
 .header-content {
     position: absolute;
@@ -39,105 +48,210 @@ header {
     transform: translate(-50%, -50%);
     background: rgba(0, 37, 63, 0.75);
     color: #fff;
-    padding: 2rem;
+    padding: 1.5rem; /* Adjust padding */
     border-radius: 8px;
     text-align: center;
-    width: 80%;
+    width: 90%; /* Make content responsive */
     max-width: 960px;
 }
 
 .header-content h1 {
-    font-size: 3rem;
-    margin-bottom: 0.75rem;
+    font-size: 2.5rem; /* Adjust font size */
+    margin-bottom: 0.5rem;
     font-weight: 600;
 }
 
 .header-content p {
-    font-size: 1.2rem;
+    font-size: 1.1rem;
     font-weight: 400;
     opacity: 0.9;
 }
 
-/* Navigation */
-nav {
+.cta-button {
+    display: inline-block;
     background-color: #007bff;
-    padding: 1rem 0;
-    text-align: center;
-    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.05);
+    color: white;
+    padding: 0.75rem 1.5rem;
+    text-decoration: none;
+    border-radius: 6px;
+    font-weight: 600;
+    transition: background-color 0.3s ease, transform 0.2s ease-in-out;
+    margin-top: 1rem;
 }
 
-nav ul {
+.cta-button:hover {
+    background-color: #0056b3;
+    transform: scale(1.05);
+}
+
+/* Navigation Styles (Desktop) */
+.desktop-nav {
+    display: none; /* Hidden by default on smaller screens */
+    margin-top: 1rem;
+}
+
+.desktop-nav ul {
     list-style: none;
     padding: 0;
     margin: 0;
     display: flex;
-    align-items: center;
     justify-content: center;
 }
 
-nav li.nav-item {
-    margin-right: 1.5rem;
+.desktop-nav li {
+    margin: 0 1rem;
+    position: relative;
 }
 
-nav li.more-link {
-    cursor: pointer;
+.desktop-nav a {
+    color: #333; /* Darker text for visibility on white header */
+    text-decoration: none;
+    font-size: 1rem;
+    font-weight: 500;
+    transition: color 0.3s ease;
+    padding: 0.5rem 0.75rem;
+    display: block;
 }
 
-nav li.hidden {
+.desktop-nav a:hover {
+    color: #007bff;
+}
+
+/* Dropdown Styles */
+.dropdown {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    background-color: #fff;
+    border-radius: 5px;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    z-index: 10;
     display: none;
+    min-width: 150px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+    border: 1px solid #ddd;
 }
 
-nav a {
+.dropdown.open {
+    display: block;
+}
+
+.dropdown li {
+    margin: 0;
+}
+
+.dropdown li a {
+    padding: 0.75rem 1rem;
+    color: #333;
+    display: block;
+    transition: background-color 0.3s ease;
+}
+
+.dropdown li a:hover {
+    background-color: #f9f9f9;
+}
+
+.has-dropdown > a::after {
+    content: '\25BE';
+    margin-left: 5px;
+    font-size: 0.8em;
+}
+
+/* Mobile Navigation Styles */
+.mobile-menu-button {
+    display: block; /* Visible on smaller screens */
+    position: absolute;
+    top: 1rem;
+    right: 1rem;
+    background: none;
+    color: #fff;
+    border: none;
+    font-size: 1.2rem;
+    cursor: pointer;
+    z-index: 20;
+    padding: 0.5rem 0.75rem;
+    border-radius: 5px;
+    background-color: rgba(0, 0, 0, 0.3);
+}
+
+.mobile-nav {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.9);
+    z-index: 15;
+    padding-top: 3rem;
+    text-align: center;
+}
+
+.mobile-nav.open {
+    display: block;
+}
+
+.mobile-nav ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.mobile-nav li {
+    padding: 1rem 0;
+    border-bottom: 1px solid #555;
+}
+
+.mobile-nav li:last-child {
+    border-bottom: none;
+}
+
+.mobile-nav a {
     color: #fff;
     text-decoration: none;
     font-size: 1.1rem;
-    font-weight: 500;
-    transition: color 0.3s ease;
 }
 
-nav a:hover {
-    color: #e0e0e0;
-}
-
-    nav a {
-        font-size: 1rem;
-        padding: 0.75rem 1rem;
-        display: block;
-    }
+/* Navigation (Original - Hide on larger screens) */
+nav {
+    display: none; /* Hide the original nav */
 }
 
 /* Main Content */
 main {
-    padding: 3rem 2rem;
+    padding: 2rem 20px; /* Adjust padding */
     max-width: 1200px;
     margin: 0 auto;
 }
 
 main h2 {
-    font-size: 2.5rem;
+    font-size: 2rem; /* Adjust font size */
     font-weight: 700;
-    margin-bottom: 2rem;
+    margin-bottom: 1.5rem;
     color: #007bff;
     text-align: center;
 }
 
 main p {
     color: #555;
-    margin-bottom: 1.2rem;
+    margin-bottom: 1rem;
     line-height: 1.7;
+    font-size: 1rem; /* Adjust font size */
 }
 
 /* Services Preview on Home Page */
 .services-preview {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
-    gap: 2.5rem;
-    margin-top: 2.5rem;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); /* Adjust min width */
+    gap: 1.5rem;
+    margin-top: 1.5rem;
 }
 
 .service-card {
     background-color: #fff;
-    padding: 2rem;
+    padding: 1.5rem;
     border-radius: 8px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.08);
     text-align: center;
@@ -150,40 +264,40 @@ main p {
 
 .service-card h3 {
     color: #0056b3;
-    margin-bottom: 1rem;
-    font-size: 1.5rem;
+    margin-bottom: 0.75rem;
+    font-size: 1.3rem;
 }
 
 .service-card p {
     color: #777;
-    font-size: 1rem;
+    font-size: 0.9rem;
 }
 
 /* Services Grid on Services Page */
 .services-grid {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
-    gap: 2.5rem;
-    margin-top: 2.5rem;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); /* Adjust min width */
+    gap: 1.5rem;
+    margin-top: 1.5rem;
 }
 
 .services-grid .service-card {
     background-color: #fff;
-    padding: 2rem;
+    padding: 1.5rem;
     border-radius: 8px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.08);
 }
 
 .services-grid .service-card h3 {
     color: #0056b3;
-    margin-bottom: 1rem;
-    font-size: 1.5rem;
+    margin-bottom: 0.75rem;
+    font-size: 1.3rem;
 }
 
 .services-grid .service-card p {
     color: #555;
-    margin-bottom: 1.2rem;
-    font-size: 1rem;
+    margin-bottom: 1rem;
+    font-size: 0.9rem;
 }
 
 .services-grid .service-card ul {
@@ -193,8 +307,8 @@ main p {
 
 .services-grid .service-card ul li {
     color: #777;
-    padding: 0.5rem 0;
-    font-size: 0.95rem;
+    padding: 0.4rem 0;
+    font-size: 0.9rem;
     border-bottom: 1px solid #eee;
 }
 
@@ -206,8 +320,8 @@ main p {
 .projects-grid {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-    gap: 0.75rem;
-    margin-top: 1.5rem;
+    gap: 1rem;
+    margin-top: 1rem;
 }
 
 .project-card {
@@ -232,7 +346,7 @@ main p {
     color: #007bff;
     padding: 0.5rem;
     margin-bottom: 0.1rem;
-    font-size: 1.3rem;
+    font-size: 1.1rem;
     font-weight: 600;
 }
 
@@ -240,7 +354,7 @@ main p {
     color: #555;
     padding: 0 0.5rem 0.5rem;
     margin-bottom: 0.3rem;
-    font-size: 0.9rem;
+    font-size: 0.85rem;
 }
 
 .project-details {
@@ -253,7 +367,7 @@ main p {
     color: #333;
     margin-top: 0;
     margin-bottom: 0.2rem;
-    font-size: 1rem;
+    font-size: 0.9rem;
     font-weight: 500;
 }
 
@@ -271,10 +385,10 @@ main p {
 /* Contact Form */
 .contact-form {
     background-color: #fff;
-    padding: 3rem;
+    padding: 2rem;
     border-radius: 8px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.08);
-    margin-bottom: 3rem;
+    margin-bottom: 2rem;
     max-width: 700px;
     margin-left: auto;
     margin-right: auto;
@@ -283,45 +397,45 @@ main p {
 .contact-form h2 {
     color: #007bff;
     text-align: center;
-    margin-bottom: 2rem;
-    font-size: 2rem;
+    margin-bottom: 1.5rem;
+    font-size: 1.75rem;
     font-weight: 600;
 }
 
 .contact-form label {
     display: block;
-    margin-bottom: 0.75rem;
+    margin-bottom: 0.5rem;
     color: #333;
     font-weight: 500;
-    font-size: 1rem;
+    font-size: 0.9rem;
 }
 
 .contact-form input[type="text"],
 .contact-form input[type="email"],
 .contact-form textarea {
     width: 100%;
-    padding: 1rem;
-    margin-bottom: 1.5rem;
+    padding: 0.75rem;
+    margin-bottom: 1rem;
     border: 1px solid #ccc;
     border-radius: 4px;
     box-sizing: border-box;
     font-family: inherit;
-    font-size: 1rem;
+    font-size: 0.9rem;
 }
 
 .contact-form textarea {
     resize: vertical;
-    min-height: 150px;
+    min-height: 120px;
 }
 
 .contact-form button[type="submit"] {
     background-color: #007bff;
     color: white;
-    padding: 1rem 2rem;
+    padding: 0.75rem 1.5rem;
     border: none;
     border-radius: 6px;
     cursor: pointer;
-    font-size: 1.1rem;
+    font-size: 1rem;
     transition: background-color 0.3s ease;
     font-weight: 500;
     display: block;
@@ -335,25 +449,25 @@ main p {
 /* Contact Info */
 .contact-info {
     background-color: #f9f9f9;
-    padding: 3rem 2rem;
+    padding: 2rem 1.5rem;
     border-radius: 8px;
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
     text-align: center;
     max-width: 700px;
-    margin: 0 auto 3rem;
+    margin: 0 auto 2rem;
 }
 
 .contact-info h3 {
     color: #007bff;
-    margin-bottom: 1.5rem;
-    font-size: 1.8rem;
+    margin-bottom: 1rem;
+    font-size: 1.5rem;
     font-weight: 600;
 }
 
 .contact-info p {
     color: #555;
-    margin-bottom: 1rem;
-    font-size: 1.05rem;
+    margin-bottom: 0.75rem;
+    font-size: 0.95rem;
 }
 
 .contact-info a {
@@ -371,159 +485,38 @@ main p {
 /* About Us Styles */
 .company-overview {
     background-color: #fff;
-    padding: 3rem;
+    padding: 2rem;
     border-radius: 8px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.08);
-    margin-bottom: 3rem;
+    margin-bottom: 2rem;
 }
 
 .company-overview h2 {
     color: #007bff;
-    margin-bottom: 1.5rem;
-    font-size: 2rem;
+    margin-bottom: 1rem;
+    font-size: 1.75rem;
     font-weight: 600;
     text-align: center;
 }
 
 .company-overview p {
     color: #555;
-    font-size: 1.1rem;
+    font-size: 1rem;
     line-height: 1.7;
 }
 
 .team-section {
     text-align: center;
-    margin-top: 4rem;
+    margin-top: 3rem;
 }
 
 .team-section h3 {
     color: #007bff;
-    margin-bottom: 1.5rem;
-    font-size: 1.8rem;
+    margin-bottom: 1rem;
+    font-size: 1.5rem;
     font-weight: 600;
 }
 
 .team-section p {
     color: #777;
-    margin-bottom: 2rem;
-}
-
-.team-members {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-    gap: 2rem;
-    margin-top: 2rem;
-}
-
-.team-member {
-    background-color: #fff;
-    border-radius: 8px;
-    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
-    padding: 1.5rem;
-    text-align: center;
-}
-
-.team-member img {
-    width: 200px;
-    height: auto;
-    object-fit: cover;
-    border-radius: 50%;
-    margin-bottom: 0.75rem;
-}
-
-.team-member h4 {
-    color: #333;
-    margin-bottom: 0.5rem;
-    font-size: 1.2rem;
-    font-weight: 500;
-}
-
-.team-member p {
-    color: #777;
-    font-size: 0.95rem;
-}
-
-/* Call to Action Button */
-.cta-button {
-    display: inline-block;
-    background-color: #007bff;
-    color: white;
-    padding: 1rem 2rem;
-    text-decoration: none;
-    border-radius: 6px;
-    font-weight: 600;
-    transition: background-color 0.3s ease, transform 0.2s ease-in-out;
-    margin-top: 2rem;
-}
-
-.cta-button:hover {
-    background-color: #0056b3;
-    transform: scale(1.05);
-}
-
-/* Footer */
-footer {
-    background-color: #343a40;
-    color: #f8f9fa;
-    text-align: center;
-    padding: 1rem;
-    margin-top: 4rem;
-    font-size: 0.9rem;
-}
-
-/* Responsive adjustments for smaller screens */
-@media (max-width: 768px) {
-    header {
-        padding: 1rem 0;
-    }
-
-    .header-content {
-        padding: 1.5rem;
-        width: 95%;
-    }
-
-    .header-content h1 {
-        font-size: 2.5rem;
-    }
-
-    .header-content p {
-        font-size: 1.1rem;
-    }
-
-    main {
-        padding: 2rem 1rem;
-    }
-
-    main h2 {
-        font-size: 2rem;
-    }
-
-    .services-preview,
-    .services-grid,
-    .projects-grid,
-    .team-members {
-        grid-template-columns: 1fr;
-    }
-
-    .service-card,
-    .project-card,
-    .team-member {
-        margin-bottom: 2rem;
-        text-align: center;
-    }
-
-    .contact-form,
-    .contact-info,
-    .company-overview {
-        padding: 2rem 1.5rem;
-    }
-
-    .contact-form h2,
-    .company-overview h2 {
-        font-size: 1.75rem;
-    }
-
-    .team-member img {
-        width: 150px;
-    }
-}
+    margin-bottom:
