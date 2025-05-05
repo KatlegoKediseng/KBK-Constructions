@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=1024">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Reagile Construction Company</title>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -11,63 +11,98 @@
 </head>
 <body>
     <div class="site-wrapper">
-        <header>
+        <header class="full-width-header">
             <img src="895044_Construction-Recruitment-Bringing-Young-Talent-into-the-Industry.jpg" alt="Construction site with workers and equipment" class="header-image" />
             <div class="header-content">
                 <h1>Reagile Construction Company</h1>
-                <p>Building Together, Stronger Together..</p>
-                <nav>
-                    <button class="menu-button">Menu</button>
-                    <ul>
+                <p>Building Together, Stronger Together.</p>
+                <nav class="desktop-nav">
+                    <ul class="main-nav">
                         <li class="nav-item"><a href="index.html">Home</a></li>
-                        <li class="nav-item"><a href="about.html">About Us</a></li>
-                        <li class="nav-item"><a href="services.html">Services</a></li>
+                        <li class="nav-item has-dropdown">
+                            <a href="#">About Us</a>
+                            <ul class="dropdown">
+                                <li><a href="about.html">Our Story</a></li>
+                                <li><a href="#">Our Team</a></li>
+                                <li><a href="#">Our Values</a></li>
+                            </ul>
+                        </li>
+                        <li class="nav-item has-dropdown">
+                            <a href="#">Services</a>
+                            <ul class="dropdown">
+                                <li><a href="services.html">All Services</a></li>
+                                <li><a href="#">Building Construction</a></li>
+                                <li><a href="#">Civil Construction</a></li>
+                                <li><a href="#">Electrical Construction</a></li>
+                                <li><a href="#">Other Services</a></li>
+                            </ul>
+                        </li>
                         <li class="nav-item"><a href="projects.html">Projects</a></li>
                         <li class="nav-item"><a href="contact.html">Contact Us</a></li>
                     </ul>
                 </nav>
                 <a href="services.html" class="cta-button">Explore Services</a>
             </div>
+            <button class="menu-button mobile-menu-button">Menu</button>
+            <nav class="mobile-nav">
+                <ul>
+                    <li class="nav-item"><a href="index.html">Home</a></li>
+                    <li class="nav-item"><a href="about.html">About Us</a></li>
+                    <li class="nav-item"><a href="services.html">Services</a></li>
+                    <li class="nav-item"><a href="projects.html">Projects</a></li>
+                    <li class="nav-item"><a href="contact.html">Contact Us</a></li>
+                </ul>
+            </nav>
         </header>
-    <main id="home">
-        <section class="about-preview">
-            <h2>About Reagile Construction</h2>
-            <p>Reagile Construction Company is dedicated to providing high-quality construction services, focusing on reliability and innovation. With a team of experienced professionals, we strive to exceed client expectations in every project, from residential buildings to large-scale civil engineering works. Our commitment to using modern techniques and maintaining stringent quality standards ensures successful and sustainable outcomes.</p>
-        </section>
+        <main id="home">
+            <section class="about-preview">
+                <h2>About Reagile Construction</h2>
+                <p>Reagile Construction Company is dedicated to providing high-quality construction services, focusing on reliability and innovation. With a team of experienced professionals, we strive to exceed client expectations in every project, from residential buildings to large-scale civil engineering works. Our commitment to using modern techniques and maintaining stringent quality standards ensures successful and sustainable outcomes.</p>
+            </section>
 
-        <section id="services">
-            <h2>Our Services</h2>
-            <p>We offer a wide range of сonstruction services to meet your needs.</p>
-            <div class="services-preview">
-                <div class="service-card">
-                    <h3>Building Construction</h3>
-                    <p>Creating spaces where life unfolds.</p>
+            <section id="services" class="full-width-section">
+                <h2>Our Services</h2>
+                <p>We offer a wide range of сonstruction services to meet your needs.</p>
+                <div class="services-preview">
+                    <div class="service-card">
+                        <h3>Building Construction</h3>
+                        <p>Creating spaces where life unfolds.</p>
+                    </div>
+                    <div class="service-card">
+                        <h3>Civil Construction</h3>
+                        <p>Creating functional and impressive civil spaces.</p>
+                    </div>
+                    <div class="service-card">
+                        <h3>Electrical Construction</h3>
+                        <p>Powering the future, one connection at a time.</p>
+                    </div>
                 </div>
-                <div class="service-card">
-                    <h3>Civil Construction</h3>
-                    <p>Creating functional and impressive civil spaces.</p>
-                </div>
-                <div class="service-card">
-                    <h3>Electrical Construction</h3>
-                    <p>Powering the future, one connection at a time.</p>
-                </div>
-            </div>
-        </section>
-    </main>
+            </section>
+        </main>
 
-    <footer>
-        <p>&copy; 2025 Reagile Constructions Company</p>
-    </footer>
+        <footer>
+            <p>&copy; 2025 Reagile Constructions Company</p>
+        </footer>
+    </div>
     <script>
         document.addEventListener('DOMContentLoaded', () => {
-            const menuButton = document.querySelector('.menu-button');
-            const nav = document.querySelector('nav');
+            const mobileMenuButton = document.querySelector('.mobile-menu-button');
+            const mobileNav = document.querySelector('.mobile-nav');
+            const dropdownLinks = document.querySelectorAll('.has-dropdown > a');
 
-            if (menuButton && nav) {
-                menuButton.addEventListener('click', () => {
-                    nav.classList.toggle('open');
+            if (mobileMenuButton && mobileNav) {
+                mobileMenuButton.addEventListener('click', () => {
+                    mobileNav.classList.toggle('open');
                 });
             }
+
+            dropdownLinks.forEach(link => {
+                link.addEventListener('click', (e) => {
+                    e.preventDefault();
+                    const dropdown = link.nextElementSibling;
+                    dropdown.classList.toggle('open');
+                });
+            });
         });
     </script>
 </body>
